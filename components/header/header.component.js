@@ -1,5 +1,5 @@
 (function (angular) {
-    'use strict'
+    'use strict';
     let app = angular.module("eShopper");
 
     app.component('headerComponent', {
@@ -26,10 +26,8 @@
         $scope.options = [
             { name: 'Account', href: '', icon: 'fa fa-user' },
             { name: 'Wishlist', href: '', icon: 'fa fa-star' },
-            { name: 'Checkout', href: 'checkout.html', icon: 'fa fa-crosshairs' },
+            { name: 'Checkout', href: '#!checkout', icon: 'fa fa-crosshairs' },
             { name: 'Cart', href: '#!cart', icon: 'fa fa-shopping-cart' },
-            { name: 'Login', href: 'login.html', icon: 'fa fa-lock' }]
+            { name: 'Login', href: '#!login', icon: 'fa fa-lock' }];
     }
-
-
 }(angular))

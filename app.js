@@ -12,6 +12,14 @@
 				when('/cart', {
 					template: '<cart-component></cart-component>'
 				}).
+				when('/login', {
+					template: '<login-component></login-component>'
+				}).
+				when('/contact', {
+					template: '<contact-component></contact-component>'
+				}).when('/checkout', {
+					template: '<checkout-component></checkout-component>'
+				}).
 				otherwise('/home');
 		}
 	]);
