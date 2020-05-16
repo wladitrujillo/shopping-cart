@@ -27,7 +27,7 @@
             { name: 'Account', href: '', icon: 'fa fa-user' },
             { name: 'Wishlist', href: '', icon: 'fa fa-star' },
             { name: 'Checkout', href: 'checkout.html', icon: 'fa fa-crosshairs' },
-            { name: 'Cart', href: 'cart.html', icon: 'fa fa-shopping-cart' },
+            { name: 'Cart', href: '#!cart', icon: 'fa fa-shopping-cart' },
             { name: 'Login', href: 'login.html', icon: 'fa fa-lock' }]
     }
 

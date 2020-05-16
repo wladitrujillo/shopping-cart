@@ -30,24 +30,7 @@
 
 	<header-component></header-component>
 
-	<section id='slider'>
-		<slider-component></slider-component>
-	</section>
-
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<category-selector></category-selector>
-				</div>
-				<div class="col-sm-9 padding-right">			
-					<item-list></item-list>
-					<category-tab></category-tab>
-					<recommended-list></recommended-list>
-				</div>
-			</div>
-		</div>
-	</section>
+	<div ng-view></div>
 
 	<footer-component></footer-component>
 
@@ -56,6 +39,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
 	<script src="app.js"></script>
 	<script src="components/header/header.component.js"></script>
 	<script src="components/footer/footer.component.js"></script>
@@ -64,7 +48,8 @@
 	<script src="components/category-tab/category.tab.js"></script>
 	<script src="components/item-list/item.list.js"></script>
 	<script src="components/recommended-list/recommended.list.js"></script>
-	<script src="js/feature-items-ctrl.js"></script>
+	<script src="components/home/home.component.js"></script>
+	<script src="components/cart/cart.component.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/price-range.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
