@@ -1,12 +1,5 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('eShopper', []);
 
-myApp.controller("HeaderCtrl", function () {
-    this.appDetails = {
-        title :"BooKart",
-        tagline : "We have collection of 1 Million books"
-    }
-
-});
 
 myApp.controller("BookListCtrl", function() {
 	this.books = [
