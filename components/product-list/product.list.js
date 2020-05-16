@@ -4,12 +4,12 @@
 
     app.component('productList', {
         templateUrl: 'components/product-list/product.list.html',
-        controller: ItemListCtrl
+        controller: Controller
     });
 
-    ItemListCtrl.$inject = ['$scope'];
+    Controller.$inject = ['$scope'];
 
-    function ItemListCtrl($scope) {
+    function Controller($scope) {
 
         $scope.items = [{
             imgUrl: "images/home/product1.jpg",
