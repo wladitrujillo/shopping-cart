@@ -3,7 +3,7 @@
     let app = angular.module('eShopper');
 
     app.component('itemList', {
-        templateUrl: 'components/item-list/item.list.html',
+        templateUrl: 'components/product-list/product.list.html',
         controller: ItemListCtrl
     });
 
