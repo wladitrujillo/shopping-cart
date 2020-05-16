@@ -2,7 +2,7 @@
     'use strict';
     let app = angular.module('eShopper');
 
-    app.component('itemList', {
+    app.component('productList', {
         templateUrl: 'components/product-list/product.list.html',
         controller: ItemListCtrl
     });
