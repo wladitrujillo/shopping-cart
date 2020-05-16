@@ -8,16 +8,20 @@
                     <div class="panel panel-default" ng-repeat="category in categories">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#{{category.name}}">
+                                <a ng-if="category.subcategory && category.subcategory.length>0" data-toggle="collapse"
+                                    data-parent="#accordian" href="javascript:;" data-target="#{{category.name}}">
                                     <span ng-if="category.subcategory && category.subcategory.length>0"
                                         class="badge pull-right">
                                         <i class="fa fa-plus"></i>
                                     </span>
                                     {{category.name}}
                                 </a>
+                                <a ng-if="!category.subcategory || category.subcategory.length==0" href="#">
+                                    {{category.name}} </a>
                             </h4>
                         </div>
-                        <div id="{{category.name}}" class="panel-collapse collapse">
+                        <div ng-if="category.subcategory && category.subcategory.length>0" id="{{category.name}}"
+                            class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ul>
                                     <li ng-repeat="subcategory in category.subcategory">

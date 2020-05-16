@@ -20,8 +20,8 @@
 
         $scope.refreshSlider();
         $scope.slider_draggable_range = {
-            minValue: 20,
-            maxValue: 70,
+            minValue: 0,
+            maxValue: 200,
             options: {
                 ceil: 200,
                 floor: 0,
