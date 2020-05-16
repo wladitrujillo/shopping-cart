@@ -1,32 +1,103 @@
-<div class="features_items">
-    <!--features_items-->
-    <h2 class="title text-center">Features Items</h2>
-    <div class="col-sm-4" ng-repeat="item in items">
-        <div class="product-image-wrapper">
-            <div class="single-products">
-                <div class="productinfo text-center">
-                    <img ng-src="{{item.imgUrl}}" alt="" />
-                    <h2>{{item.price | currency}}</h2>
-                    <p>{{item.description}}</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i
-                            class="fa fa-shopping-cart"></i>Add to cart</a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="left-sidebar">
+                <h2>Category</h2>
+                <div class="panel-group category-products" id="accordian">
+                    <!--category-productsr-->
+                    <div class="panel panel-default" ng-repeat="category in categories">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#{{category.name}}">
+                                    <span ng-if="category.subcategory && category.subcategory.length>0"
+                                        class="badge pull-right">
+                                        <i class="fa fa-plus"></i>
+                                    </span>
+                                    {{category.name}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="{{category.name}}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li ng-repeat="subcategory in category.subcategory">
+                                        <a href="#">{{subcategory}} </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-overlay">
-                    <div class="overlay-content">
-                        <h2>{{item.price | currency}}</h2>
-                        <p>{{item.description}}</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i
-                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                <!--/category-products-->
+
+                <div class="brands_products">
+                    <!--brands_products-->
+                    <h2>Brands</h2>
+                    <div class="brands-name">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li ng-repeat="brand in brands">
+                                <a href="#"> <span class="pull-right">({{brand.total}})</span>{{brand.name}}</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--/brands_products-->
+
+                <div class="price-range">
+                    <!--price-range-->
+                    <h2>Price Range</h2>
+                    <div class="well text-center">
+                        <rzslider rz-slider-model="slider_draggable_range.minValue"
+                            rz-slider-high="slider_draggable_range.maxValue"
+                            rz-slider-options="slider_draggable_range.options"></rzslider>
+                        <b class="pull-left">{{slider_draggable_range.minValue| currency}}</b>
+                        <b class="pull-right">{{slider_draggable_range.maxValue| currency}}</b>
+                    </div>
+                </div>
+                <!--/price-range-->
+
+                <div class="shipping text-center">
+                    <!--shipping-->
+                    <img src="images/home/shipping.jpg" alt="" />
+                </div>
+                <!--/shipping-->
+
+            </div>
+        </div>
+        <div class="col-sm-9 padding-right">
+            <div class="features_items">
+                <!--features_items-->
+                <h2 class="title text-center">Features Items</h2>
+                <div class="col-sm-4" ng-repeat="item in products">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img ng-src="{{item.imgUrl}}" alt="" />
+                                <h2>{{item.price | currency}}</h2>
+                                <p>{{item.description}}</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
+                                    to cart</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <h2>{{item.price | currency}}</h2>
+                                    <p>{{item.description}}</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choose">
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="choose">
-                <ul class="nav nav-pills nav-justified">
-                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                </ul>
-            </div>
+            <!--features_items-->
+
         </div>
     </div>
 </div>
-<!--features_items-->

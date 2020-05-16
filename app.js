@@ -1,7 +1,7 @@
 (function (angular) {
 	'use strict';
 
-	let app = angular.module('eShopper', ['ngRoute']);
+	let app = angular.module('eShopper', ['ngRoute','rzSlider']);
 
 	app.config(['$routeProvider',
 		function config($routeProvider) {

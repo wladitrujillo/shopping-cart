@@ -2439,3 +2439,14 @@ textarea {
 .contact-info .social-networks ul li a:hover {
     color: #FE980F;
 }
+
+.rzslider .rz-pointer {
+    top:-6px!important;
+    width: 18px!important;
+    height: 18px!important;
+}
+
+.rzslider .rz-pointer:after {    
+    top: 5px!important;
+    left: 5px!important;      
+}
