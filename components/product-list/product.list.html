@@ -17,6 +17,8 @@
                         cart</a>
                 </div>
             </div>
+            <img ng-if="item.isNew" src="images/home/new.png" class="new" alt="" />
+            <img ng-if="item.isSale" src="images/home/sale.png" class="new" alt="" />
         </div>
         <div class="choose">
             <ul class="nav nav-pills nav-justified">
@@ -26,3 +28,9 @@
         </div>
     </div>
 </div>
+<ul class="pagination">
+    <li class="active"><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">&raquo;</a></li>
+</ul>
