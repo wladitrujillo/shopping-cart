@@ -3,13 +3,14 @@
 
     let app = angular.module('eShopper');
 
-    app.component('blog', {
-        templateUrl: 'components/blogger/blog.template.html',
+    app.component('product', {
+        templateUrl: 'components/shop/product.template.html',
         controller: Controller
     });
 
     function Controller() {
 
     }
+
 
 }(angular))

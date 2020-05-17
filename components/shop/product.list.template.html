@@ -1,0 +1,40 @@
+<div class="features_items">
+    <h2 class="title text-center">Features Items</h2>
+    <div class="col-sm-4" ng-repeat="item in $ctrl.products">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img ng-src="{{item.imgUrl}}" alt="" />
+                    <h2>{{item.price | currency}}</h2>
+                    <p>{{item.description}}</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i
+                            class="fa fa-shopping-cart"></i>Add
+                        to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>{{item.price | currency}}</h2>
+                        <p>{{item.description}}</p>
+                        <a class="btn btn-default add-to-cart" ng-click="$ctrl.addCart(item)"><i
+                                class="fa fa-shopping-cart"></i>Add to
+                            cart</a>
+                    </div>
+                </div>
+                <img ng-if="item.isNew" src="images/home/new.png" class="new" alt="" />
+                <img ng-if="item.isSale" src="images/home/sale.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="pagination">
+        <li class="active"><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">&raquo;</a></li>
+    </ul>
+</div>

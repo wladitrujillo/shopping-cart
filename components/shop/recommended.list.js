@@ -3,7 +3,7 @@
     let app = angular.module('eShopper');
 
     app.component('recommendedList', {
-        templateUrl: 'components/recommended-list/recommended.list.html',
+        templateUrl: 'components/shop/recommended.list.html',
         controller: RecommendedListCtrl
     });
 

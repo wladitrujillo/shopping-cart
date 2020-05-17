@@ -3,13 +3,15 @@
 
     let app = angular.module('eShopper');
 
-    app.component('blog', {
-        templateUrl: 'components/blogger/blog.template.html',
+    app.component('productList', {
+        bindings: { products: '<' },
+        templateUrl: 'components/shop/product.list.template.html',
         controller: Controller
     });
 
     function Controller() {
 
     }
+
 
 }(angular))

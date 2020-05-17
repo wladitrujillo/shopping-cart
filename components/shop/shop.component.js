@@ -2,8 +2,7 @@
     'use strict';
     let app = angular.module('eShopper');
 
-    app.component('shop', {
-        bindings: { products: '<' },
+    app.component('shop', {        
         templateUrl: 'components/shop/shop.template.html',
         controller: Controller
     });

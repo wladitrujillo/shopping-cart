@@ -31,7 +31,12 @@
 				{
 					name: 'shop',
 					url: '/shop',
-					component: 'shop',
+					component: 'shop',					
+					redirectTo: 'shop.product',
+				}, {
+					name: 'shop.product',
+					url: '/product-list',
+					component: 'productList',
 					resolve: {
 						products: ProductService => ProductService.getAll()
 					}
