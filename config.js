@@ -15,6 +15,7 @@
 				{ name: 'login', url: '/login', component: 'login' },
 				{ name: 'contact', url: '/contact', component: 'contact' },
 				{ name: 'shop', url: '/shop', component: 'shop' },
+				{ name: 'blog', url: '/blog', component: 'blog' },
 				{
 					name: 'people',
 					url: '/people',
