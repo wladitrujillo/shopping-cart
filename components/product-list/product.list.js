@@ -11,8 +11,6 @@
 
     function Controller($scope) {
 
-
-
         $scope.products = [{
             imgUrl: "images/home/product1.jpg",
             price: 56,

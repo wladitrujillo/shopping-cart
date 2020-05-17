@@ -7,9 +7,7 @@
         controller: Controller
     });
 
-    Controller.$inject = ['$scope'];
-
-    function Controller($scope) {
+    function Controller() {
 
     }
 

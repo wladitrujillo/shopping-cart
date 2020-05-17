@@ -1,5 +1,6 @@
 (function (angular) {
     'use strict';
+
     let app = angular.module('eShopper');
 
     app.component('blog', {
@@ -7,9 +8,7 @@
         controller: Controller
     });
 
-    Controller.$inject = ['$scope'];
-
-    function Controller($scope) {
+    function Controller() {
 
     }
 

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="breadcrumbs">
             <ol class="breadcrumb">
-                <li><a href="#!home">Home</a></li>
+                <li><a ui-sref="home">Home</a></li>
                 <li class="active">Shopping Cart</li>
             </ol>
         </div>
@@ -19,7 +19,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in items">
+                    <tr ng-repeat="item in $ctrl.items">
                         <td class="cart_product">
                             <a href=""><img ng-src="{{item.product.imgUrl}}" alt=""></a>
                         </td>

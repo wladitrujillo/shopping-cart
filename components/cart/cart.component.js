@@ -7,11 +7,11 @@
         controller: Controller
     });
 
-    Controller.$inject = ['$scope'];
 
-    function Controller($scope) {
 
-        $scope.items = [
+    function Controller() {
+
+        this.items = [
             {
                 product: {
                     imgUrl: "images/cart/one.png",

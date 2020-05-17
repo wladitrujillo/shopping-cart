@@ -38,23 +38,12 @@
 				$stateProvider.state(state);
 			});
 		}
-
-
 	]);
 
-
-
-
-	app.run(function ($rootScope, $state, $uiRouter) {
+	app.run(function ($uiRouter) {
 		var Visualizer = window['ui-router-visualizer'].Visualizer;
 		$uiRouter.plugin(Visualizer);
 
-		$rootScope.$on('$stateChangeStart', function (evt, to, params) {
-			if (to.redirectTo) {
-				evt.preventDefault();
-				$state.go(to.redirectTo, params)
-			}
-		});
 	});
 
 }(angular))
