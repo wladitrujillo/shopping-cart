@@ -2,14 +2,14 @@
     'use strict';
 
     let app = angular.module('eShopper');
-    app.component('sliderComponent', {
+    app.component('slider', {
         templateUrl: 'components/slider/slider.template.html',
-        controller: SliderCtrl
+        controller: Controller
     });
 
-    SliderCtrl.$inject = ['$scope'];
+    Controller.$inject = ['$scope'];
 
-    function SliderCtrl($scope) {
+    function Controller($scope) {
 
     }
 

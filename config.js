@@ -10,8 +10,8 @@
 			var states = [
 
 				{ name: 'home', url: '/', component: 'home' },
-				{ name: 'cart', url: '/cart', component: 'cart' },
 				{ name: 'checkout', url: '/checkout', component: 'checkout' },
+				{ name: 'cart', url: '/cart', component: 'cart' },				
 				{ name: 'login', url: '/login', component: 'login' },
 				{ name: 'contact', url: '/contact', component: 'contact' },
 				{
