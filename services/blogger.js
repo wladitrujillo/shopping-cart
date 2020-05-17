@@ -12,7 +12,7 @@
                 get: id => {
 
                     return service.getAll().then(blogs => {
-                        return blogs.find(blog => blog.id === id);
+                        return blogs.find(blog => blog.id == id);
                     });
                 }
             }

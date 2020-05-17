@@ -31,7 +31,7 @@
 				{
 					name: 'shop',
 					url: '/shop',
-					component: 'shop',					
+					component: 'shop',
 					redirectTo: 'shop.product',
 				}, {
 					name: 'shop.product',
@@ -45,6 +45,12 @@
 					name: 'blogger',
 					url: '/blogger',
 					component: 'blogger',
+					redirectTo: 'blogger.blog-list',
+				},
+				{
+					name: 'blogger.blog-list',
+					url: '/blog-list',
+					component: 'blogList',
 					resolve: {
 						blogs: BloggerService => BloggerService.getAll()
 					}
@@ -54,8 +60,8 @@
 					url: '/{blogId}',
 					component: 'blog',
 					resolve: {
-						blog: (blogs, $stateParams) =>
-							blogs.find(blog => blog.id === $stateParams.blogId)
+						blog: (BloggerService, $stateParams) =>
+							BloggerService.get($stateParams.blogId)
 					}
 				}
 			]

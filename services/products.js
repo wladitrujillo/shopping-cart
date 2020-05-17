@@ -12,7 +12,7 @@
                 get: id => {
 
                     return service.getAll().then(products => {
-                        return products.find(product => product.id === id);
+                        return products.find(product => product.id == id);
                     });
                 }
             }

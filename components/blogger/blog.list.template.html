@@ -1,0 +1,35 @@
+<div class="blog-post-area">
+    <h2 class="title text-center">Latest From our Blog</h2>
+    <div class="single-blog-post" ng-repeat="blog in $ctrl.blogs">
+        <h3>{{blog.title}}</h3>
+        <div class="post-meta">
+            <ul>
+                <li><i class="fa fa-user"></i> {{blog.user}}</li>
+                <li><i class="fa fa-clock-o"></i> {{blog.createAt.getHours()}}
+                    :{{ blog.createAt.getMinutes()}}</li>
+                <li><i class="fa fa-calendar"></i> DEC 5, 2019</li>
+            </ul>
+            <span>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </span>
+        </div>
+        <a href="">
+            <img ng-src="{{blog.imgUrl}}" alt="">
+        </a>
+        <p>{{blog.description}}</p>
+        <a class="btn btn-primary" ui-sref="blogger.blog({ blogId: blog.id })">Read More</a>
+    </div>
+
+    <div class="pagination-area">
+        <ul class="pagination">
+            <li><a href="" class="active">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href=""><i class="fa fa-angle-double-right"></i></a></li>
+        </ul>
+    </div>
+</div>
