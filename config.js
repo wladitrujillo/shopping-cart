@@ -9,12 +9,33 @@
 			// An array of state definitions
 			var states = [
 
-				{ name: 'home', url: '/', component: 'home' },
+				{
+					name: 'home',
+					url: '/',
+					component: 'home',
+					resolve: {
+						products: ProductService => ProductService.getAll()
+					}
+				},
 				{ name: 'checkout', url: '/checkout', component: 'checkout' },
-				{ name: 'cart', url: '/cart', component: 'cart' },
+				{
+					name: 'cart',
+					url: '/cart',
+					component: 'cart',
+					resolve: {
+						items: ShoppingCartService => ShoppingCartService.getAll()
+					}
+				},
 				{ name: 'login', url: '/login', component: 'login' },
 				{ name: 'contact', url: '/contact', component: 'contact' },
-				{ name: 'shop', url: '/shop', component: 'shop' },
+				{
+					name: 'shop',
+					url: '/shop',
+					component: 'shop',
+					resolve: {
+						products: ProductService => ProductService.getAll()
+					}
+				},
 				{
 					name: 'blogger',
 					url: '/blogger',

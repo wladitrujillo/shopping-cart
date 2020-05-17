@@ -3,13 +3,17 @@
     let app = angular.module('eShopper');
 
     app.component('shop', {
+        bindings: { products: '<' },
         templateUrl: 'components/shop/shop.template.html',
         controller: Controller
     });
 
-    Controller.$inject = ['$scope'];
 
-    function Controller($scope) {
+
+    function Controller(ShoppingCartService) {
+
+
+        this.addCart = product => ShoppingCartService.add(product);
 
     }
 
