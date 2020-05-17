@@ -2,8 +2,8 @@
     'use strict';
     let app = angular.module('eShopper');
 
-    app.component('blogList', {
-        templateUrl: 'components/blog-list/blog.list.template.html',
+    app.component('blog', {
+        templateUrl: 'components/blogger/blog.template.html',
         controller: Controller
     });
 

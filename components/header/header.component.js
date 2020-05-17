@@ -26,8 +26,8 @@
         $scope.options = [
             { name: 'Account', href: '', icon: 'fa fa-user' },
             { name: 'Wishlist', href: '', icon: 'fa fa-star' },
-            { name: 'Checkout', href: '#!checkout', icon: 'fa fa-crosshairs' },
-            { name: 'Cart', href: '#!cart', icon: 'fa fa-shopping-cart' },
-            { name: 'Login', href: '#!login', icon: 'fa fa-lock' }];
+            { name: 'Checkout', href: 'checkout', icon: 'fa fa-crosshairs' },
+            { name: 'Cart', href: 'cart', icon: 'fa fa-shopping-cart' },
+            { name: 'Login', href: 'login', icon: 'fa fa-lock' }];
     }
 }(angular))

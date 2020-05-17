@@ -61,7 +61,7 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             <li ng-repeat="o in options">
-                                <a href="{{o.href}}"><i ng-class="o.icon"></i>{{o.name}}</a></li>
+                                <a ui-sref="{{o.href}}"><i ng-class="o.icon"></i>{{o.name}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -90,16 +90,16 @@
                             <li><a href="#!home" class="active">Home</a></li>
                             <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="#!shop">Products</a></li>
+                                    <li><a ui-sref="shop">Products</a></li>
                                     <li><a href="product-details.html">Product Details</a></li>
-                                    <li><a href="#!checkout">Checkout</a></li>
-                                    <li><a href="#!cart">Cart</a></li>
-                                    <li><a href="#!login">Login</a></li>
+                                    <li><a ui-sref="checkout">Checkout</a></li>
+                                    <li><a ui-sref="cart">Cart</a></li>
+                                    <li><a ui-sref="login">Login</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="#!blogger">Blog List</a></li>
+                                    <li><a ui-sref="blogger" href="">Blog List</a></li>
                                     <li><a href="blog-single.html">Blog Single</a></li>
                                 </ul>
                             </li>

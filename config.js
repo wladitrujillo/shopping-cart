@@ -11,32 +11,25 @@
 
 				{ name: 'home', url: '/', component: 'home' },
 				{ name: 'checkout', url: '/checkout', component: 'checkout' },
-				{ name: 'cart', url: '/cart', component: 'cart' },				
+				{ name: 'cart', url: '/cart', component: 'cart' },
 				{ name: 'login', url: '/login', component: 'login' },
 				{ name: 'contact', url: '/contact', component: 'contact' },
 				{ name: 'shop', url: '/shop', component: 'shop' },
-				{ name: 'blogger', url: '/blogger', component: 'blogger' },
 				{
-					name: 'people',
-					url: '/people',
-					component: 'people',
+					name: 'blogger',
+					url: '/blogger',
+					component: 'blogger',
 					resolve: {
-						people: function (PeopleService) {
-							return PeopleService.getAllPeople();
-						}
+						blogs: BloggerService => BloggerService.getAll()
 					}
 				},
-
 				{
-					name: 'people.person',
-					url: '/{personId}',
-					component: 'person',
+					name: 'blogger.blog',
+					url: '/{blogId}',
+					component: 'blog',
 					resolve: {
-						person: function (people, $stateParams) {
-							return people.find(function (person) {
-								return person.id === $stateParams.personId;
-							});
-						}
+						blog: (blogs, $stateParams) =>
+							blogs.find(blog => blog.id === $stateParams.blogId)
 					}
 				}
 			]
