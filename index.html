@@ -30,17 +30,23 @@
 <body ng-app="eShopper">
 
 	<header-component></header-component>
-
-	<div ng-view></div>
+	 
+    <ui-view></ui-view>
 
 	<footer-component></footer-component>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.0/rzslider.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.0/rzslider.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.5/angular-ui-router.js"></script>
+
+	<script src="//unpkg.com/show-current-browser-url"></script>
+    <script src="//unpkg.com/d3@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ui-router-visualizer@4.0.0/bundles/visualizer.min.js"></script>
+	
 	<script src="app.js"></script>
+	<script src="config.js"></script>
 	<script src="components/login/login.component.js"></script>
 	<script src="components/contact/contact.component.js"></script>
 	<script src="components/checkout/checkout.component.js"></script>

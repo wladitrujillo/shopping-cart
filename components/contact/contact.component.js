@@ -2,7 +2,7 @@
     'use strict';
     let app = angular.module("eShopper");
 
-    app.component('contactComponent', {
+    app.component('contact', {
         templateUrl: 'components/contact/contact.template.html',
         controller: Controller
     });
