@@ -81,8 +81,8 @@
 	]);
 
 	app.run(function ($uiRouter) {
-		var Visualizer = window['ui-router-visualizer'].Visualizer;
-		$uiRouter.plugin(Visualizer);
+		/*var Visualizer = window['ui-router-visualizer'].Visualizer;
+		$uiRouter.plugin(Visualizer);*/
 
 	});
 

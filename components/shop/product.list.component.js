@@ -9,8 +9,8 @@
         controller: Controller
     });
 
-    function Controller() {
-
+    function Controller(ShoppingCartService) {
+        this.addToCart = item => ShoppingCartService.add(item);
     }
 
 

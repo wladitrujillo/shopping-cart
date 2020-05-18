@@ -13,7 +13,8 @@
 
         $scope.header = {
             phone: "+2 95 01 88 821",
-            email: "info@domain.com"
+            email: "info@domain.com",
+            logo: "images/home/logo.png"
         };
 
         $scope.social = [
@@ -24,10 +25,36 @@
             { href: '', icon: 'fa fa-google-plus' }];
 
         $scope.options = [
-            { name: 'Account', href: '', icon: 'fa fa-user' },
-            { name: 'Wishlist', href: '', icon: 'fa fa-star' },
+            /* { name: 'Account', href: '', icon: 'fa fa-user' },
+             { name: 'Wishlist', href: '', icon: 'fa fa-star' },*/
             { name: 'Checkout', href: 'checkout', icon: 'fa fa-crosshairs' },
             { name: 'Cart', href: 'cart', icon: 'fa fa-shopping-cart' },
             { name: 'Login', href: 'login', icon: 'fa fa-lock' }];
+
+        $scope.menu = [
+
+            {
+                name: "Home",
+                href: "home"
+            },
+            {
+                name: "Shop",
+                href: "",
+                hasChilds: true,
+                childs: [
+                    { name: "Products", href: "shop" },
+                    { name: "Checkout", href: "checkout" },
+                    { name: "Cart", href: "cart" },
+                    { name: "Login", href: "login" }]
+            },
+            {
+                name: "Blog",
+                href: "blogger"
+            },  
+            {
+                name: "Contact",
+                href: "contact"
+            }
+        ]
     }
 }(angular))

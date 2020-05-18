@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-4 clearfix">
                     <div class="logo pull-left">
-                        <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                        <a ui-sref="home"><img ng-src="{{header.logo}}" alt="" /></a>
                     </div>
                     <div class="btn-group pull-right clearfix">
                         <div class="btn-group">
@@ -61,7 +61,8 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             <li ng-repeat="o in options">
-                                <a ui-sref="{{o.href}}"><i ng-class="o.icon"></i>{{o.name}}</a></li>
+                                <a href="#" ui-sref="{{o.href}}" ui-sref-active="active"><i
+                                        ng-class="o.icon"></i>{{o.name}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,7 +73,7 @@
 
     <!--header-bottom-->
     <div class="header-bottom">
-    
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-9">
@@ -87,22 +88,17 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="#!home" class="active">Home</a></li>
-                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a ui-sref="shop">Products</a></li>                                 
-                                    <li><a ui-sref="checkout">Checkout</a></li>
-                                    <li><a ui-sref="cart">Cart</a></li>
-                                    <li><a ui-sref="login">Login</a></li>
+                            <li ng-repeat="me in menu" ng-class="{dropdown:me.hasChilds}">
+                                <a ng-if="me.hasChilds" href="#">{{me.name}}<i class="fa fa-angle-down"></i></a>
+                                <ul ng-if="me.hasChilds" role="menu" class="sub-menu">
+                                    <li ng-repeat="child in me.childs">
+                                        <a ui-sref="{{child.href}}">{{child.name}}</a></li>
                                 </ul>
-                            </li>
-                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a ui-sref="blogger" href="">Blog List</a></li>                                 
-                                </ul>
-                            </li>
+                                <a ng-if="!me.hasChilds" href="#" ui-sref="{{me.href}}"
+                                    ui-sref-active="active">{{me.name}} </a>
+                            </li>                               
                             <li><a href="404.html">404</a></li>
-                            <li><a ui-sref="contact">Contact</a></li>
+                       
                         </ul>
                     </div>
                 </div>
