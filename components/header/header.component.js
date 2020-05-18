@@ -7,31 +7,19 @@
         controller: HeaderCtrl
     });
 
-    HeaderCtrl.$inject = ['$scope'];
+    function HeaderCtrl(CompanyService) {
 
-    function HeaderCtrl($scope) {
+        CompanyService.getInfo().then(data => this.company = data);
 
-        $scope.header = {
-            phone: "+2 95 01 88 821",
-            email: "info@domain.com",
-            logo: "images/home/logo.png"
-        };
 
-        $scope.social = [
-            { href: '', icon: 'fa fa-facebook' },
-            { href: '', icon: 'fa fa-twitter' },
-            { href: '', icon: 'fa fa-linkedin' },
-            { href: '', icon: 'fa fa-dribbble' },
-            { href: '', icon: 'fa fa-google-plus' }];
-
-        $scope.options = [
+        this.options = [
             /* { name: 'Account', href: '', icon: 'fa fa-user' },
              { name: 'Wishlist', href: '', icon: 'fa fa-star' },*/
             { name: 'Checkout', href: 'checkout', icon: 'fa fa-crosshairs' },
             { name: 'Cart', href: 'cart', icon: 'fa fa-shopping-cart' },
             { name: 'Login', href: 'login', icon: 'fa fa-lock' }];
 
-        $scope.menu = [
+        this.menu = [
 
             {
                 name: "Home",
@@ -50,7 +38,7 @@
             {
                 name: "Blog",
                 href: "blogger"
-            },  
+            },
             {
                 name: "Contact",
                 href: "contact"

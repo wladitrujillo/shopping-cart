@@ -7,16 +7,16 @@
                 <div class="col-sm-6">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> {{header.phone}}</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> {{header.email}}</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> {{$ctrl.company.phone}}</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> {{$ctrl.company.email}}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="social-icons pull-right">
                         <ul class="nav navbar-nav">
-                            <li ng-repeat="s in social">
-                                <a ng-href="{{s.href}}"><i ng-class="s.icon"></i></a></li>
+                            <li ng-repeat="n in $ctrl.company.networks">
+                                <a ng-href="{{n.href}}"><i ng-class="n.icon"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-4 clearfix">
                     <div class="logo pull-left">
-                        <a ui-sref="home"><img ng-src="{{header.logo}}" alt="" /></a>
+                        <a ui-sref="home"><img ng-src="{{$ctrl.company.logo}}" alt="" /></a>
                     </div>
                     <div class="btn-group pull-right clearfix">
                         <div class="btn-group">
@@ -60,7 +60,7 @@
                 <div class="col-md-8 clearfix">
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
-                            <li ng-repeat="o in options">
+                            <li ng-repeat="o in $ctrl.options">
                                 <a href="#" ui-sref="{{o.href}}" ui-sref-active="active"><i
                                         ng-class="o.icon"></i>{{o.name}}</a></li>
                         </ul>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li ng-repeat="me in menu" ng-class="{dropdown:me.hasChilds}">
+                            <li ng-repeat="me in $ctrl.menu" ng-class="{dropdown:me.hasChilds}">
                                 <a ng-if="me.hasChilds" href="#">{{me.name}}<i class="fa fa-angle-down"></i></a>
                                 <ul ng-if="me.hasChilds" role="menu" class="sub-menu">
                                     <li ng-repeat="child in me.childs">

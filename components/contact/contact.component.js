@@ -6,9 +6,10 @@
         templateUrl: 'components/contact/contact.template.html',
         controller: Controller
     });
- 
-    function Controller() {       
 
+    function Controller(CompanyService) {
+
+        CompanyService.getInfo().then(data => this.company = data);
     }
-    
+
 }(angular))
