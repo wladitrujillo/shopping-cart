@@ -8,8 +8,8 @@
         controller: Controller
     });
 
-    function Controller() {     
-
+    function Controller(ShoppingCartService) {
+        this.remove = product => ShoppingCartService.remove(product);
     }
 
 }(angular))
