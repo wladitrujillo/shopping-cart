@@ -32,13 +32,21 @@
 					name: 'shop',
 					url: '/shop',
 					component: 'shop',
-					redirectTo: 'shop.product',
+					redirectTo: 'shop.product-list',
 				}, {
-					name: 'shop.product',
+					name: 'shop.product-list',
 					url: '/product-list',
 					component: 'productList',
 					resolve: {
 						products: ProductService => ProductService.getAll()
+					}
+				},{
+					name: 'shop.product',
+					url: '/{productId}',
+					component: 'product',
+					resolve: {
+						product: (ProductService, $stateParams) =>
+							ProductService.get($stateParams.productId)
 					}
 				},
 				{

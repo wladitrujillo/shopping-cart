@@ -7,8 +7,7 @@
                     <img ng-src="{{item.imgUrl}}" alt="" />
                     <h2>{{item.price | currency}}</h2>
                     <p>{{item.description}}</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i
-                            class="fa fa-shopping-cart"></i>Add
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add
                         to cart</a>
                 </div>
                 <div class="product-overlay">
@@ -26,7 +25,8 @@
             <div class="choose">
                 <ul class="nav nav-pills nav-justified">
                     <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                    <!--li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li-->
+                    <li><a href="" ui-sref="shop.product({ productId: item.id })"><i class="fa fa-plus-square"></i>View Detail</a></li>
                 </ul>
             </div>
         </div>
