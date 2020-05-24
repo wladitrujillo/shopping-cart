@@ -30,7 +30,7 @@
                 href: "",
                 hasChilds: true,
                 childs: [
-                    { name: "Products", href: "shop" },
+                    { name: "Products", href: "product-list" },
                     { name: "Checkout", href: "checkout" },
                     { name: "Cart", href: "cart" },
                     { name: "Login", href: "login" }]

@@ -29,19 +29,14 @@
 				{ name: 'login', url: '/login', component: 'login' },
 				{ name: 'contact', url: '/contact', component: 'contact' },
 				{
-					name: 'shop',
-					url: '/shop',
-					component: 'shop',
-					redirectTo: 'shop.product-list',
-				}, {
-					name: 'shop.product-list',
+					name: 'product-list',
 					url: '/product-list',
 					component: 'productList',
 					resolve: {
 						products: ProductService => ProductService.getAll()
 					}
-				},{
-					name: 'shop.product',
+				}, {
+					name: 'product',
 					url: '/{productId}',
 					component: 'product',
 					resolve: {
