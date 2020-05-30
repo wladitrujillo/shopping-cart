@@ -3,18 +3,10 @@
     angular.module('eShopper')
         .service('ProductService', function ($http) {
             var service = {
-                getAll: () => {
-                    return $http.get('data/products.json', { cache: true }).then(resp => {
-                        return resp.data;
-                    });
-                },
-
-                get: id => {
-
-                    return service.getAll().then(products => {
-                        return products.find(product => product.id == id);
-                    });
-                }
+                getAll: () =>
+                    $http.get('/product', { cache: true }).then(resp => resp.data),
+                get: id =>
+                    $http.get('/product/' + id, { cache: true }).then(resp => resp.data)
             }
 
             return service;

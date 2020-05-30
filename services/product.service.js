@@ -80,9 +80,9 @@ function get(id) {
             deferred.reject({ message: err });
         }
 
-        let products = JSON.parse(data);
+        let products = JSON.parse(data);      
 
-        deferred.resolve(products.find(p => p.id === id));
+        deferred.resolve(products.find(p => p.id == id));
 
     });
 

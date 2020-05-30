@@ -3,18 +3,8 @@
     angular.module('eShopper')
         .service('BloggerService', function ($http) {
             var service = {
-                getAll: () => {
-                    return $http.get('data/blogs.json', { cache: true }).then(resp => {
-                        return resp.data;
-                    });
-                },
-
-                get: id => {
-
-                    return service.getAll().then(blogs => {
-                        return blogs.find(blog => blog.id == id);
-                    });
-                }
+                getAll: () => $http.get('/blog', { cache: true }).then(resp => resp.data),
+                get: id => $http.get('/blog/' + id, { cache: true }).then(resp => resp.data)
             }
 
             return service;

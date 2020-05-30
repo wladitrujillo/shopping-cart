@@ -81,7 +81,7 @@ function get(id) {
 
         let blogs = JSON.parse(data);
 
-        deferred.resolve(blogs.find(b => b.id === id));
+        deferred.resolve(blogs.find(b => b.id == id));
 
     });
 

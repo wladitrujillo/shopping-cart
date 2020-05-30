@@ -11,7 +11,7 @@ module.exports.get = get;
  * @param {*} req 
  * @param {*} res 
  */
-function query(req, res) { 
+function query(req, res) {
 
     var q = req.query.q;
     var fields = req.query.fields;
@@ -40,7 +40,7 @@ function query(req, res) {
 function get(req, res) {
 
     service.get(req.params._id)
-        .then(function (data) {
+        .then(data => {
             res.status(200).send(data);
         })
         .catch(err => onError(err, res));

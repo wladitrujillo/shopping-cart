@@ -37,7 +37,7 @@
 					}
 				}, {
 					name: 'product',
-					url: '/{productId}',
+					url: '/product/{productId}',
 					component: 'product',
 					resolve: {
 						product: (ProductService, $stateParams) =>

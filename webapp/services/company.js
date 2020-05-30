@@ -5,7 +5,7 @@
             var service = {              
 
                 getInfo: () => {
-                    return $http.get('data/company.json', { cache: true }).then(resp => {
+                    return $http.get('/shopper/info', { cache: true }).then(resp => {
                         return resp.data;
                     });
                 }
