@@ -1,0 +1,38 @@
+{
+    "development": {
+        "host_url": "http://localhost",
+        "host_port": 4200,
+        "database_url": "mongodb://localhost:27017/invoiceweb",
+        "secret": "170306SanNelTCh2701796",
+        "node_port": 3000,
+        "app_name": "Facturacion App",
+        "create_user_with_email": false,
+        "url_images": "../images",
+        "email_config": {
+            "host": "smtp.ethereal.email",
+            "port": 587,
+            "auth": {
+                "user": "kariane.lemke2@ethereal.email",
+                "pass": "kafsc9nvtdb5W72Tma"
+            }
+        }
+    },
+    "staging": {
+        "host_url": "http://3.88.197.4",
+        "host_port": 80,
+        "database_url": "mongodb://ntrujillo:Passw0rd2019@ds241298.mlab.com:41298/invoiceweb",
+        "secret": "170306SanNelTCh2701796",
+        "node_port": 3000,
+        "app_name": "Facturacion App",
+        "create_user_with_email": false,
+        "url_images": "../images",
+        "email_config": {
+            "host": "smtp.ethereal.email",
+            "port": 587,
+            "auth": {
+                "user": "kariane.lemke2@ethereal.email",
+                "pass": "kafsc9nvtdb5W72Tma"
+            }
+        }
+    }
+}

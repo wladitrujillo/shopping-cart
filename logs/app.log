@@ -1,0 +1,20 @@
+[2020-05-30T15:36:57.205] [DEBUG] ProductController - query start
+[2020-05-30T15:37:35.714] [DEBUG] ProductController - query ====> undefined
+[2020-05-30T15:38:01.547] [DEBUG] ProductController - query ====> {}
+[2020-05-30T15:40:42.220] [DEBUG] ProductController - query start
+[2020-05-30T15:41:20.582] [DEBUG] ProductController - productService ====> { query: [Function: query] }
+[2020-05-30T15:41:49.384] [DEBUG] ProductService - Init query
+[2020-05-30T15:42:39.064] [DEBUG] ProductService - Init query
+[2020-05-30T15:43:11.582] [DEBUG] ProductService - Init query
+[2020-05-30T15:44:02.848] [DEBUG] ProductService - Init query
+[2020-05-30T15:44:16.227] [DEBUG] ProductService - Init query
+[2020-05-30T15:44:43.232] [DEBUG] ProductService - Init query
+[2020-05-30T15:45:50.133] [DEBUG] ProductController - Start query 
+[2020-05-30T15:45:50.134] [DEBUG] ProductController - productService 
+[2020-05-30T15:45:50.134] [DEBUG] ProductService - Init query
+[2020-05-30T15:45:50.808] [DEBUG] ProductController - Start query 
+[2020-05-30T15:45:50.808] [DEBUG] ProductController - productService 
+[2020-05-30T15:45:50.809] [DEBUG] ProductService - Init query
+[2020-05-30T15:58:55.894] [DEBUG] ProductService - Init query
+[2020-05-30T15:58:59.588] [DEBUG] ProductService - Init query
+[2020-05-30T16:02:08.354] [DEBUG] ShopperService - get info
