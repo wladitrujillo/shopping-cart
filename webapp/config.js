@@ -81,7 +81,8 @@
 				Inicio:"Inicio",
 				Compras:"Compras",
 				Productos:"Productos",
-				Carrito:"Carrito"				
+				Carrito:"Carrito",
+				AddToCart:"Agregar al Carrito"				
 			});
 			$translateProvider.translations('en', {
 				FeatureItems: 'Products',
@@ -89,7 +90,8 @@
 				Inicio:'Home',
 				Compras:"Shop",
 				Productos:"Products",				
-				Carrito:"Cart"					
+				Carrito:"Cart",
+				AddToCart:"Add to Cart"					
 			});
 			$translateProvider.preferredLanguage('es');
 		}
