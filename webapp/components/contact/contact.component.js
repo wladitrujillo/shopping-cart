@@ -13,6 +13,23 @@
 
         service.getInfo().then(data => this.company = data);
 
+
+        this.emailBody = {
+            name: "",
+            email: "",
+            subject: "",
+            message: ""
+        };
+
+        this.sendEmail = (emailBody) => {
+            service.sendEmail(emailBody)
+                .then(response => {
+                    console.log(response)
+                }).catch(error => {
+                    console.error(error);
+                });
+        }
+
         var map;
 
         map = new GMaps({
