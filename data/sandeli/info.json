@@ -1,11 +1,12 @@
 {
     "name": "Sandeli Sabores Inc.",
     "address": "Carcelen",
-    "country": "Quito",
+    "country": "Ecuador - Quito",
     "phone": "+2 95 01 88 821",
     "fax": "1-714-252-0026",
     "email": "sandefes@hotmail.com",
     "logo": "images/home/sandeli.png",
+    "description":"Disfrutas de los mejores postres para toda ocasión",
     "networks": [
         {
             "icon": "fa fa-facebook",

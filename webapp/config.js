@@ -77,15 +77,23 @@
 
 			$translateProvider.translations('es', {
 				FeatureItems: 'Productos',
-				Contact: 'Contactanos',
+				Contact: 'Contactános',
 				Home: "Inicio",
 				Shop: "Compras",
-				Productos: "Productos",
+				Products: "Productos",
 				Cart: "Carrito",
 				AddToCart: "Agregar al Carrito",
-				ContactInfo:"Información de Conctacto",
-				SocialNetworking:"Redes Sociales",
-				RecommendedItems:"Te Recomendados"
+				ContactInfo: "Información de Contacto",
+				SocialNetworking: "Redes Sociales",
+				RecommendedItems: "Te Recomendamos",
+				Language: "Idioma",
+				English: "Inglés",
+				Spanish: "Español",
+				Submit: "Enviar",
+				Name:"Nombre",
+				Email:"Email",
+				Subject:"Motivo",
+				YourMessageHere:"Tu mensaje aqui"
 			});
 
 			$translateProvider.translations('en', {
@@ -93,12 +101,20 @@
 				Contact: 'Contact',
 				Home: 'Home',
 				Shop: "Shop",
-				Productos: "Products",
+				Products: "Products",
 				Cart: "Cart",
 				AddToCart: "Add to Cart",
-				ContactInfo:"Contact Info",
-				SocialNetworking:"Social Networking",
-				RecommendedItems:"Recommended Items"
+				ContactInfo: "Contact Info",
+				SocialNetworking: "Social Networking",
+				RecommendedItems: "Recommended Items",
+				Language: "Language",
+				English: "English",
+				Spanish: "Spanish",
+				Submit: "Submit",
+				Name:"Name",
+				Email:"Email",
+				Subject:"Subject",
+				YourMessageHere:"Your Message Here"
 			});
 			$translateProvider.preferredLanguage('es');
 		}

@@ -59,9 +59,9 @@
         "id": 8,
         "imgUrl": "images/cakes/8.jpeg",
         "price": 25,
-        "description": "T orta mojada",
+        "description": "Torta mojada",
         "isNew": false,
-        "isSale": true
+        "isSale": false
     },
     {
         "id": 9,
@@ -108,7 +108,7 @@
         "imgUrl": "images/cakes/plazaSesamo.jpeg",
         "price": 25,
         "description": "Torta Plaza Sesamo (vainilla, chocolate, naranja, etc)",
-        "isNew": false,
+        "isNew": true,
         "isSale": false
     },
     {
@@ -213,7 +213,7 @@
         "price": 25,
         "description": "Easy Polo Black Edition",
         "isNew": false,
-        "isSale": true
+        "isSale": false
     },
     {
         "id": 28,
@@ -234,22 +234,6 @@
     {
         "id": 30,
         "imgUrl": "images/cakes/30.jpeg",
-        "price": 25,
-        "description": "Easy Polo Black Edition",
-        "isNew": false,
-        "isSale": false
-    },
-    {
-        "id": 31,
-        "imgUrl": "images/cakes/31.jpeg",
-        "price": 25,
-        "description": "Easy Polo Black Edition",
-        "isNew": false,
-        "isSale": false
-    },
-    {
-        "id": 32,
-        "imgUrl": "images/cakes/32.jpeg",
         "price": 25,
         "description": "Easy Polo Black Edition",
         "isNew": false,

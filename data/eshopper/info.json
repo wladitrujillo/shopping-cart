@@ -6,6 +6,7 @@
     "fax": "1-714-252-0026",
     "email": "info@domain.com",
     "logo": "images/home/logo.png",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor",
     "networks": [
         {
             "icon": "fa fa-facebook",

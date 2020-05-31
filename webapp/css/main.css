@@ -131,7 +131,15 @@ a#scrollUp i {
 }
 
 .fa-google-plus:hover {
-    background: #CE3C2D;
+    background: #EC4B13;
+}
+
+.fa-whatsapp:hover {
+    background:#2AAD1D;
+}
+
+.fa-instagram:hover {
+    background:#FF4518;
 }
 
 .header-middle .container .row {

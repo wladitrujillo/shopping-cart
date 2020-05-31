@@ -7,8 +7,10 @@
         controller: FooterCtrl
     });
 
-    function FooterCtrl() {
-      
+    FooterCtrl.$inject = ['ShopperService'];
+
+    function FooterCtrl(ShopperService) {
+        ShopperService.getInfo().then(data => this.company = data);
     }
 
 
