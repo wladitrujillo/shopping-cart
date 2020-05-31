@@ -8,10 +8,10 @@ var minifyHTML = require('gulp-minify-html');
 // minify new or changed HTML pages
 gulp.task('minify-html', function () {
   var opts = { empty: true, quotes: true };
-  var htmlPath = { htmlSrc: './webapp/components/**/*.html'};
+  var htmlPath = { htmlSrc: ['./webapp/components/**/*.html', '!/**/*.min.html'] };
 
   return gulp.src(htmlPath.htmlSrc)
-   // .pipe(changed(htmlPath.htmlDest))
+    // .pipe(changed(htmlPath.htmlDest))
     .pipe(minifyHTML(opts))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(function (file) {
@@ -27,7 +27,7 @@ var rename = require('gulp-rename');
 
 // CSS concat, auto prefix, minify, then rename output file
 gulp.task('minify-css', function () {
-  var cssPath = { cssSrc: ['./content/css/*.css', '!*.min.css', '!/**/*.min.css'], cssDest: './webapp/css/' };
+  var cssPath = { cssSrc: ['./webapp/css/*.css', '!*.min.css', '!/**/*.min.css'], cssDest: './webapp/css/' };
 
   return gulp.src(cssPath.cssSrc)
     .pipe(concat('style.css'))
@@ -43,7 +43,13 @@ var uglify = require('gulp-uglify-es').default;
 
 // JS concat, strip debugging code and minify
 gulp.task('bundle-scripts', function () {
-  var jsPath = { jsSrc: ['./webapp/app.js', './webapp/config.js', './webapp/components/**/*.js', './webapp/services/*.js'] };
+  var jsPath = {
+    jsSrc: ['./webapp/app.js',
+      './webapp/config.js',
+      './webapp/components/**/*.js',
+      './webapp/services/*.js',
+      '!/**/*.min.js']
+  };
   return gulp.src(jsPath.jsSrc)
     // .pipe(concat('ngscripts.js'))
     .pipe(stripDebug())
