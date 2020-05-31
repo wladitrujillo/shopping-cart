@@ -1,10 +1,10 @@
 {
-    "name": "Sandeli Inc.",
+    "name": "Sandeli Sabores Inc.",
     "address": "Carcelen",
     "country": "Quito",
     "phone": "+2 95 01 88 821",
     "fax": "1-714-252-0026",
-    "email": "sandeli@gmail.com",
+    "email": "sandefes@hotmail.com",
     "logo": "images/home/sandeli.png",
     "networks": [
         {
@@ -14,6 +14,10 @@
         {
             "icon": "fa fa-instagram",
             "href": "https://www.instagram.com/sandeli.sabores/"
+        },             
+        {
+            "icon": "fa fa-whatsapp",
+            "href": "https://wa.me/+593983405635"
         }
     ]
 }
