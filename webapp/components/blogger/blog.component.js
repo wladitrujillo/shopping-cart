@@ -1,16 +1,6 @@
-(function (angular) {
-    'use strict';
-
-    let app = angular.module('eShopper');
-
-    app.component('blog', {
+angular.module('eShopper')
+    .component('blog', {
         bindings: { blog: '<' },
-        templateUrl: 'components/blogger/blog.template..min.html',
-        controller: Controller
+        templateUrl: 'components/blogger/blog.template.min.html',
+        controller: function () { }
     });
-
-    function Controller() {
-
-    }
-
-}(angular))

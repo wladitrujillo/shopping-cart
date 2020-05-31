@@ -1,17 +1,11 @@
-(function (angular) {
-    'use strict'
-    let app = angular.module("eShopper");
 
-    app.component('footerComponent', {
+angular.module("eShopper")
+    .component('footerComponent', {
         templateUrl: 'components/footer/footer.template.min.html',
-        controller: FooterCtrl
+        controller: ['ShopperService', function (ShopperService) {
+            ShopperService.getInfo().then(data => this.company = data);
+        }
+        ]
     });
 
-    FooterCtrl.$inject = ['ShopperService'];
 
-    function FooterCtrl(ShopperService) {
-        ShopperService.getInfo().then(data => this.company = data);
-    }
-
-
-}(angular))

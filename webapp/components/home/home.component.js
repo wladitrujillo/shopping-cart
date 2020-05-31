@@ -1,15 +1,9 @@
-(function (angular) {
-    'use strict'
-    let app = angular.module("eShopper");
 
-    app.component('home', {
+angular.module("eShopper")
+    .component('home', {
         bindings: { products: '<' },
         templateUrl: 'components/home/home.template.min.html',
-        controller: HomeCtrl
+        controller: function () { }
     });
 
-    function HomeCtrl() {
 
-    }
-
-}(angular))

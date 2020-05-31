@@ -1,20 +1,8 @@
-(function (angular) {
-    'use strict'
-    let app = angular.module("eShopper");
 
-    app.component('categoryTab', {
+angular.module("eShopper")
+    .component('categoryTab', {
         templateUrl: 'components/shop/category.tab.min.html',
-        controller: CategoryTabCtrl
+        controller: function () { }
     });
 
-    CategoryTabCtrl.$inject = ['$scope'];
 
-    function CategoryTabCtrl($scope) {
-
-        $scope.header = {
-            phone: "+2 95 01 88 821",
-            email: "info@domain.com"
-        };       
-    }
-    
-}(angular))

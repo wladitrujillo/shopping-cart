@@ -1,17 +1,10 @@
-(function (angular) {
-    'use strict';
-
-    let app = angular.module('eShopper');
-
-    app.component('product', {
+angular.module('eShopper')
+    .component('product', {
         bindings: { product: '<' },
         templateUrl: 'components/shop/product.template.min.html',
-        controller: Controller
+        controller: function () { }
     });
 
-    function Controller() {
-
-    }
 
 
-}(angular))
+

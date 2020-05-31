@@ -1,17 +1,9 @@
-(function (angular) {
-    'use strict';
-
-    let app = angular.module('eShopper');
-    app.component('cart', {
+angular.module('eShopper')
+    .component('cart', {
         bindings: { items: '<' },
         templateUrl: 'components/cart/cart.template.min.html',
-        controller: Controller
+        controller: ['ShoppingCartService',
+            function (ShoppingCartService) {
+                this.remove = product => ShoppingCartService.remove(product);
+            }]
     });
-
-    Controller.$inject = ['ShoppingCartService'];
-
-    function Controller(ShoppingCartService) {
-        this.remove = product => ShoppingCartService.remove(product);
-    }
-
-}(angular))

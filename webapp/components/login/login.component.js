@@ -1,15 +1,9 @@
-(function (angular) {
-    'use strict';
-    let app = angular.module('eShopper');
-
-    app.component('login', {
+angular.module('eShopper')
+    .component('login', {
         templateUrl: 'components/login/login.template.min.html',
-        controller: Controller
+        controller: function () { }
     });
 
-    function Controller() {
-
-    }
 
 
-}(angular))
+

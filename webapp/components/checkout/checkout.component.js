@@ -1,14 +1,6 @@
-(function (angular) {
-    'use strict';
-    let app = angular.module("eShopper");
-
-    app.component('checkout', {
+angular.module("eShopper")
+    .component('checkout', {
         templateUrl: 'components/checkout/checkout.template.min.html',
-        controller: Controller
+        controller: function () { }
     });
 
-    function Controller() {       
-
-    }
-
-}(angular))
