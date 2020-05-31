@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-8">
                 <div class="contact-form">
-                    <h2 class="title text-center">Contactanos</h2>
+                    <h2 class="title text-center" translate>Contact</h2>
                     <div class="status alert alert-success" style="display: none"></div>
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
                         <div class="form-group col-md-6">
@@ -36,7 +36,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="contact-info">
-                    <h2 class="title text-center">Contact Info</h2>
+                    <h2 class="title text-center" translate>ContactInfo</h2>
                     <address>
                         <p>{{$ctrl.company.name}}</p>
                         <p>{{$ctrl.company.address}}</p>
@@ -46,7 +46,7 @@
                         <p>Email: {{$ctrl.company.email}}</p>
                     </address>
                     <div class="social-networks">
-                        <h2 class="title text-center">Social Networking</h2>
+                        <h2 class="title text-center" translate>SocialNetworking</h2>
                         <ul>
                             <li ng-repeat="net in $ctrl.company.networks">
                                 <a href="{{net.href}}"><i ng-class="net.icon"></i></a>

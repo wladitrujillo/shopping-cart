@@ -77,21 +77,25 @@
 
 			$translateProvider.translations('es', {
 				FeatureItems: 'Productos',
-				Contactanos: 'Contactanos',
+				Contact: 'Contactanos',
 				Inicio: "Inicio",
 				Compras: "Compras",
 				Productos: "Productos",
 				Carrito: "Carrito",
-				AddToCart: "Agregar al Carrito"
+				AddToCart: "Agregar al Carrito",
+				ContactInfo:"Información de Conctacto",
+				SocialNetworking:"Redes Sociales"
 			});
 			$translateProvider.translations('en', {
 				FeatureItems: 'Products',
-				Contactanos: 'Contact',
+				Contact: 'Contact',
 				Inicio: 'Home',
 				Compras: "Shop",
 				Productos: "Products",
 				Carrito: "Cart",
-				AddToCart: "Add to Cart"
+				AddToCart: "Add to Cart",
+				ContactInfo:"Contact Info",
+				SocialNetworking:"Social Networking"
 			});
 			$translateProvider.preferredLanguage('es');
 		}

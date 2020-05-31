@@ -46,7 +46,7 @@
                 href: "blogger"
             },
             {
-                name: "Contactanos",
+                name: "Contact",
                 href: "contact"
             }
         ]
