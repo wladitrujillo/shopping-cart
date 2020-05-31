@@ -7,6 +7,8 @@ const logger = require('log4js').getLogger("ProductService");
 module.exports.query = query;
 module.exports.get = get;
 
+const dataFolder = "./data/sandeli";
+
 function query(user, q, fields, sort, page, perPage) {
     logger.debug("Init query");
 
@@ -39,13 +41,13 @@ function query(user, q, fields, sort, page, perPage) {
     }
 
 
-    fs.readFile('./data/blogs.json', (err, data) => {
+    fs.readFile(dataFolder + '/blogs.json', (err, data) => {
 
         if (err) {
-           console.error(err);
+            console.error(err);
             deferred.reject({ message: err });
         }
-        console.log(data)
+
 
         let blogs = JSON.parse(data);
 
@@ -72,7 +74,7 @@ function get(id) {
 
     var deferred = Q.defer();
 
-    fs.readFile('./data/blogs.json', (err, data) => {
+    fs.readFile(dataFolder + '/blogs.json', (err, data) => {
 
         if (err) {
             logger.error("Service error", err);

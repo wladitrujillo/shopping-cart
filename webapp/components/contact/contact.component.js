@@ -7,9 +7,11 @@
         controller: Controller
     });
 
-    function Controller(CompanyService) {
+    Controller.$inject = ['ShopperService']
 
-        CompanyService.getInfo().then(data => this.company = data);
+    function Controller(service) {
+
+        service.getInfo().then(data => this.company = data);
 
         var map;
 
@@ -26,7 +28,7 @@
             overviewMapControl: false,
             clickable: false
         });
-    
+
         var image = 'images/map-icon.png';
         map.addMarker({
             lat: 43.1580159,
@@ -37,45 +39,45 @@
             horizontalAlign: 'center',
             backgroundColor: '#ffffff',
         });
-    
+
         var styles = [
-    
+
             {
                 "featureType": "road",
                 "stylers": [
                     {
                         "color": ""
                     }
-            ]
-        }, {
+                ]
+            }, {
                 "featureType": "water",
                 "stylers": [
                     {
                         "color": "#A2DAF2"
                     }
-            ]
-        }, {
+                ]
+            }, {
                 "featureType": "landscape",
                 "stylers": [
                     {
                         "color": "#ABCE83"
                     }
-            ]
-        }, {
+                ]
+            }, {
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
                         "color": "#000000"
                     }
-            ]
-        }, {
+                ]
+            }, {
                 "featureType": "poi",
                 "stylers": [
                     {
                         "color": "#2ECC71"
                     }
-            ]
-        }, {
+                ]
+            }, {
                 "elementType": "labels.text",
                 "stylers": [
                     {
@@ -87,17 +89,17 @@
                     {
                         "color": "#111111"
                     }
-            ]
-        }
-    
+                ]
+            }
+
         ];
-    
+
         map.addStyle({
             styledMapName: "Styled Map",
             styles: styles,
             mapTypeId: "map_style"
         });
-    
+
         map.setStyle("map_style");
     }
 

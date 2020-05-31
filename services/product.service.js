@@ -7,8 +7,10 @@ const logger = require('log4js').getLogger("ProductService");
 module.exports.query = query;
 module.exports.get = get;
 
+const dataFolder = "./data/sandeli";
+
 function query(user, q, fields, sort, page, perPage) {
-    logger.debug("Init query");
+
 
     let criteria = {};
     let response = {};
@@ -38,14 +40,14 @@ function query(user, q, fields, sort, page, perPage) {
         }
     }
 
-
-    fs.readFile('./data/product.json', (err, data) => {
+    fs.readFile(dataFolder + '/product.json', (err, data) => {
+    
 
         if (err) {
-            console.error(err);
+            logger.error("Service error", err);
             deferred.reject({ message: err });
         }
-        console.log(data)
+
 
         let products = JSON.parse(data);
 
@@ -73,14 +75,14 @@ function get(id) {
 
     var deferred = Q.defer();
 
-    fs.readFile('./data/product.json', (err, data) => {
+    fs.readFile(dataFolder+'/product.json', (err, data) => {
 
         if (err) {
             logger.error("Service error", err);
             deferred.reject({ message: err });
         }
 
-        let products = JSON.parse(data);      
+        let products = JSON.parse(data);
 
         deferred.resolve(products.find(p => p.id == id));
 

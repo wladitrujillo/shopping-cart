@@ -1,0 +1,250 @@
+[
+    {
+        "id": 1,
+        "imgUrl": "images/cakes/1.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 2,
+        "imgUrl": "images/cakes/2.jpeg",
+        "price": 25,
+        "description": "Brazo Gitano de Chocolate",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 3,
+        "imgUrl": "images/cakes/3.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 4,
+        "imgUrl": "images/cakes/4.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 5,
+        "imgUrl": "images/cakes/5.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 6,
+        "imgUrl": "images/cakes/6.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 7,
+        "imgUrl": "images/cakes/7.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 8,
+        "imgUrl": "images/cakes/8.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": true
+    },
+    {
+        "id": 9,
+        "imgUrl": "images/cakes/9.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": true,
+        "isSale": false
+    },
+    {
+        "id": 10,
+        "imgUrl": "images/cakes/10.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 11,
+        "imgUrl": "images/cakes/11.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 12,
+        "imgUrl": "images/cakes/12.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 13,
+        "imgUrl": "images/cakes/13.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 14,
+        "imgUrl": "images/cakes/14.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 15,
+        "imgUrl": "images/cakes/15.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 16,
+        "imgUrl": "images/cakes/16.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 17,
+        "imgUrl": "images/cakes/17.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 19,
+        "imgUrl": "images/cakes/19.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 20,
+        "imgUrl": "images/cakes/20.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": true
+    },
+    {
+        "id": 21,
+        "imgUrl": "images/cakes/21.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": true,
+        "isSale": false
+    },
+    {
+        "id": 22,
+        "imgUrl": "images/cakes/22.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 23,
+        "imgUrl": "images/cakes/23.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 24,
+        "imgUrl": "images/cakes/24.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 25,
+        "imgUrl": "images/cakes/25.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 26,
+        "imgUrl": "images/cakes/26.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 27,
+        "imgUrl": "images/cakes/27.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": true
+    },
+    {
+        "id": 28,
+        "imgUrl": "images/cakes/28.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": true,
+        "isSale": false
+    },
+    {
+        "id": 29,
+        "imgUrl": "images/cakes/29.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 30,
+        "imgUrl": "images/cakes/30.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 31,
+        "imgUrl": "images/cakes/31.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    },
+    {
+        "id": 32,
+        "imgUrl": "images/cakes/32.jpeg",
+        "price": 25,
+        "description": "Easy Polo Black Edition",
+        "isNew": false,
+        "isSale": false
+    }
+]

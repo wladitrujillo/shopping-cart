@@ -7,7 +7,15 @@
         controller: Controller
     });
 
-    function Controller() {
+
+    Controller.$inject = ['ShopperService']
+
+    function Controller(service) {
+
+
+        service.getSliders().then(data => this.sliders = data)
+
+
 
     }
 

@@ -7,9 +7,11 @@
         controller: HeaderCtrl
     });
 
-    function HeaderCtrl(CompanyService) {
+    HeaderCtrl.$inject = ['ShopperService']
 
-        CompanyService.getInfo().then(data => this.company = data);
+    function HeaderCtrl(service) {
+
+        service.getInfo().then(data => this.company = data);
 
 
         this.options = [
