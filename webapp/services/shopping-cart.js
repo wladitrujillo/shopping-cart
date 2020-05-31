@@ -1,6 +1,6 @@
 angular.module('eShopper')
     .service('ShoppingCartService',
-        function ShoppingCartService() {
+        function () {
             let items = [];
             var service = {
                 getAll: () => items,

@@ -46,16 +46,15 @@ gulp.task('bundle-scripts', function () {
   var jsPath = {
     jsSrc: ['./webapp/app.js',
       './webapp/config.js',
-      './webapp/components/**/*.js',
       './webapp/services/*.js',
-      '!/**/*.min.js']
+      './webapp/components/**/*.js',
+      '!/**/*.min.js'],
+    jsDest: './webapp/'
   };
   return gulp.src(jsPath.jsSrc)
-    // .pipe(concat('ngscripts.js'))
+    .pipe(concat('ngscripts.js'))
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(function (file) {
-      return file.base;
-    }));
+    .pipe(gulp.dest(jsPath.jsDest));
 });
