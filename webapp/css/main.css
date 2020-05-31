@@ -1140,6 +1140,11 @@ h2.title {
     color: #fff;
 }
 
+.pagination li a.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: grey;
+}
 
 /*************************
 *******Product Details CSS******

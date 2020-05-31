@@ -3,10 +3,14 @@
     angular.module('eShopper')
         .service('ProductService', function ($http) {
             var service = {
-                getAll: () =>
-                    $http.get('/product', { cache: true }).then(resp => resp.data),
+                getAll: (page, perPage) =>
+                    $http.get('/product?page=' + (page ? page : 1) + '&per_page=' + (perPage ? perPage : 6),
+                        { cache: false })
+                        .then(response => response),
                 get: id =>
-                    $http.get('/product/' + id, { cache: true }).then(resp => resp.data)
+                    $http.get('/product/' + id,
+                        { cache: true })
+                        .then(resp => resp.data)
             }
 
             return service;

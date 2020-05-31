@@ -9,8 +9,7 @@ module.exports.get = get;
 
 const dataFolder = "./data/sandeli";
 
-function query(user, q, fields, sort, page, perPage) {
-
+function query(q, fields, sort, page, perPage) {
 
     let criteria = {};
     let response = {};
@@ -19,7 +18,6 @@ function query(user, q, fields, sort, page, perPage) {
     let plus = /\+/g;
     let comma = /\,/g;
 
-    criteria.user = user;
 
     if (q) {
         criteria.$text = { $search: q }
@@ -32,7 +30,7 @@ function query(user, q, fields, sort, page, perPage) {
         fields = fields.replace(comma, ' ');
     }
     if (page) {
-        page = parseInt(page);
+        page = parseInt(page) - 1;
         if (perPage) {
             perPage = parseInt(perPage);
         } else {
@@ -41,19 +39,17 @@ function query(user, q, fields, sort, page, perPage) {
     }
 
     fs.readFile(dataFolder + '/product.json', (err, data) => {
-    
 
         if (err) {
             logger.error("Service error", err);
             deferred.reject({ message: err });
         }
 
-
         let products = JSON.parse(data);
+        console.log("init", page * perPage);
 
         response.count = products.length;
-        response.data = products;
-
+        response.data = products.slice(page * perPage, (page * perPage) + perPage);
 
         deferred.resolve(response);
 
@@ -75,7 +71,7 @@ function get(id) {
 
     var deferred = Q.defer();
 
-    fs.readFile(dataFolder+'/product.json', (err, data) => {
+    fs.readFile(dataFolder + '/product.json', (err, data) => {
 
         if (err) {
             logger.error("Service error", err);

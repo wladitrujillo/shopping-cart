@@ -12,14 +12,12 @@ module.exports.get = get;
  * @param {*} res 
  */
 function query(req, res) {
-
+    
     var q = req.query.q;
     var fields = req.query.fields;
     var sort = req.query.sort;
-    var page = req.query.page;
-    var perPage = req.query.per_page;
 
-    service.query(q, fields, sort, page, perPage)
+    service.query(q, fields, sort, req.query.page, req.query.per_page)
         .then(response => {
             if (response.data) {
                 res.header('X-Total-Count', response.count);

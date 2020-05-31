@@ -36,7 +36,8 @@
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>{{'AddToWishlist'|translate}}</a></li>
+                                    <li><a href="#"><i class="fa fa-plus-square"></i>{{'AddToWishlist'|translate}}</a>
+                                    </li>
                                     <!--li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li-->
                                     <li><a href="" ui-sref="product({ productId: item.id })"><i
                                                 class="fa fa-plus-square"></i>{{'ViewDetail'|translate}}</a></li>
@@ -44,12 +45,20 @@
                             </div>
                         </div>
                     </div>
-                    <!--ul class="pagination">
-                        <li class="active"><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">&raquo;</a></li>
-                    </ul-->
+                    <ul class="pagination">
+                        <li>
+                            <a href="" ng-class="{disabled:$ctrl.paginationOptions.currentPage==$ctrl.pages[0]}"
+                                ng-click="$ctrl.setCurrentPage($ctrl.pages[0])">&laquo;</a></li>
+                        <li ng-class="{active:$ctrl.paginationOptions.currentPage==page}"
+                            ng-repeat="page in $ctrl.pages">
+                            <a href="" ng-click="$ctrl.setCurrentPage(page)">{{page}}</a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ng-class="{disabled:$ctrl.paginationOptions.currentPage==$ctrl.pages[$ctrl.pages.length-1]}"
+                                ng-click="$ctrl.setCurrentPage($ctrl.pages[$ctrl.pages.length-1])">&raquo;</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

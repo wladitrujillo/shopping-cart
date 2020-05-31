@@ -12,10 +12,7 @@
 				{
 					name: 'home',
 					url: '/',
-					component: 'home',
-					resolve: {
-						products: ProductService => ProductService.getAll()
-					}
+					component: 'home'
 				},
 				{ name: 'checkout', url: '/checkout', component: 'checkout' },
 				{
@@ -31,10 +28,7 @@
 				{
 					name: 'product-list',
 					url: '/product-list',
-					component: 'productList',
-					resolve: {
-						products: ProductService => ProductService.getAll()
-					}
+					component: 'productList'
 				}, {
 					name: 'product',
 					url: '/product/{productId}',
@@ -101,8 +95,8 @@
 				InStock: "Disponible",
 				AllRightsReserved: "Todos Los Derechos Reservados",
 				DesignedBy: "Diseñado por",
-				AddToWishlist:"Agregar como deseado",
-				ViewDetail:"Ver Detalle"
+				AddToWishlist: "Agregar como deseado",
+				ViewDetail: "Ver Detalle"
 
 			});
 
@@ -132,8 +126,8 @@
 				InStock: "In Stock",
 				AllRightsReserved: "All Rights Reserved",
 				DesignedBy: "Designed by",
-				AddToWishlist:"Add to wishlist",
-				ViewDetail:"View Detail"
+				AddToWishlist: "Add to wishlist",
+				ViewDetail: "View Detail"
 			});
 			$translateProvider.preferredLanguage('es');
 		}
