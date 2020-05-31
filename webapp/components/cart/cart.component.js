@@ -8,6 +8,8 @@
         controller: Controller
     });
 
+    Controller.$inject = ['ShoppingCartService'];
+
     function Controller(ShoppingCartService) {
         this.remove = product => ShoppingCartService.remove(product);
     }
