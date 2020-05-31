@@ -78,10 +78,10 @@
 			$translateProvider.translations('es', {
 				FeatureItems: 'Productos',
 				Contact: 'Contactanos',
-				Inicio: "Inicio",
-				Compras: "Compras",
+				Home: "Inicio",
+				Shop: "Compras",
 				Productos: "Productos",
-				Carrito: "Carrito",
+				Cart: "Carrito",
 				AddToCart: "Agregar al Carrito",
 				ContactInfo:"Información de Conctacto",
 				SocialNetworking:"Redes Sociales"
@@ -89,10 +89,10 @@
 			$translateProvider.translations('en', {
 				FeatureItems: 'Products',
 				Contact: 'Contact',
-				Inicio: 'Home',
-				Compras: "Shop",
+				Home: 'Home',
+				Shop: "Shop",
 				Productos: "Products",
-				Carrito: "Cart",
+				Cart: "Cart",
 				AddToCart: "Add to Cart",
 				ContactInfo:"Contact Info",
 				SocialNetworking:"Social Networking"

@@ -22,23 +22,23 @@
             /* { name: 'Account', href: '', icon: 'fa fa-user' },
              { name: 'Wishlist', href: '', icon: 'fa fa-star' },*/
             { name: 'Checkout', href: 'checkout', icon: 'fa fa-crosshairs' },
-            { name: 'Carrito', href: 'cart', icon: 'fa fa-shopping-cart' },
+            { name: 'Cart', href: 'cart', icon: 'fa fa-shopping-cart' },
             { name: 'Login', href: 'login', icon: 'fa fa-lock' }];
 
         this.menu = [
 
             {
-                name: "Inicio",
+                name: "Home",
                 href: "home"
             },
             {
-                name: "Compras",
+                name: "Shop",
                 href: "",
                 hasChilds: true,
                 childs: [
                     { name: "Productos", href: "product-list" },
                     { name: "Checkout", href: "checkout" },
-                    { name: "Carrito", href: "cart" },
+                    { name: "Cart", href: "cart" },
                     { name: "Login", href: "login" }]
             },
             {
