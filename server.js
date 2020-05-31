@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const log4js = require('log4js');
+const fs = require('fs');
+const http = require("http");
+const https = require("https");
 
 const app = express();
 const port = 3000;
@@ -11,7 +14,7 @@ const port = 3000;
 log4js.configure('./config/log4js.json');
 //seteo en middleware manejo de json
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname,'webapp')));
+app.use(express.static(path.join(__dirname, 'webapp')));
 
 // public routes
 app.use('/shopper', require('./controllers/shopper'));
