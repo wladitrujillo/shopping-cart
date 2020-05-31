@@ -27,7 +27,7 @@ function sendEmail(to, subject, html) {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Activacion de Cuenta 👻" ', // sender address
+        from: '"Sandeli Sabores" ', // sender address
         to: to, // list of receivers
         subject: subject, // Subject line
         text: '', // plain text body

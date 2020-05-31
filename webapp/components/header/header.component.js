@@ -41,10 +41,10 @@
                     { name: "Cart", href: "cart" },
                     { name: "Login", href: "login" }]
             },
-            {
+            /*{
                 name: "Blog",
                 href: "blogger"
-            },
+            },*/
             {
                 name: "Contact",
                 href: "contact"

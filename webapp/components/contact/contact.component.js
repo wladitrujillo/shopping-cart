@@ -22,6 +22,7 @@
         };
 
         this.sendEmail = (emailBody) => {
+
             service.sendEmail(emailBody)
                 .then(response => {
                     console.log(response)
@@ -30,7 +31,7 @@
                 });
         }
 
-        var map;
+       /* var map;
 
         map = new GMaps({
             el: '#gmap',
@@ -117,7 +118,7 @@
             mapTypeId: "map_style"
         });
 
-        map.setStyle("map_style");
+        map.setStyle("map_style");*/
     }
 
 }(angular))

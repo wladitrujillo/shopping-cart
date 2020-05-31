@@ -35,12 +35,12 @@ function getRecommends(req, res) {
 
 
 function sendEmail(req, res) {
-
-    let to = req.body.to;
+   
+    let email = req.body.email;
     let subject = req.body.subject;
-    let body = '<div>' + req.body.text + '</div>';
+    let message = '<div>' + req.body.message + '</div>';
 
-    emailService.sendEmail(to, subject, body)
+    emailService.sendEmail(email, subject, message)
         .then(data => onSuccess(data, res))
         .catch(err => onError(err, res));
 

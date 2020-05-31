@@ -1,35 +1,37 @@
 <div id="contact-page" class="container">
     <div class="bg">
-        <div class="row">
+        <!--div class="row">
             <div class="col-sm-12">
                 <h2 class="title text-center">Contact <strong>Us</strong></h2>
                 <div id="gmap" class="contact-map">
                 </div>
             </div>
-        </div>
+        </div-->
         <div class="row">
             <div class="col-sm-8">
+               
                 <div class="contact-form">
                     <h2 class="title text-center" translate>Contact</h2>
                     <div class="status alert alert-success" style="display: none"></div>
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
                         <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                            <input type="text" name="name" class="form-control" required="required" placeholder="Name"
+                                ng-model="$ctrl.emailBody.name">
                         </div>
                         <div class="form-group col-md-6">
                             <input type="email" name="email" class="form-control" required="required"
-                                placeholder="Email">
+                                placeholder="Email" ng-model="$ctrl.emailBody.email">
                         </div>
                         <div class="form-group col-md-12">
                             <input type="text" name="subject" class="form-control" required="required"
-                                placeholder="Subject">
+                                placeholder="Subject" ng-model="$ctrl.emailBody.subject">
                         </div>
                         <div class="form-group col-md-12">
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"
-                                placeholder="Your Message Here"></textarea>
+                                placeholder="Your Message Here" ng-model="$ctrl.emailBody.message"></textarea>
                         </div>
                         <div class="form-group col-md-12">
-                            <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+                            <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit" ng-click="$ctrl.sendEmail($ctrl.emailBody)">
                         </div>
                     </form>
                 </div>
@@ -49,7 +51,7 @@
                         <h2 class="title text-center" translate>SocialNetworking</h2>
                         <ul>
                             <li ng-repeat="net in $ctrl.company.networks">
-                                <a href="{{net.href}}"><i ng-class="net.icon"></i></a>
+                                <a href="{{net.href}}" target="_blank"><i ng-class="net.icon"></i></a>
                             </li>
 
                         </ul>

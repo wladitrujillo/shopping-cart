@@ -9,27 +9,11 @@
     "networks": [
         {
             "icon": "fa fa-facebook",
-            "href": "#"
-        },
+            "href": "https://www.facebook.com/ceci.tulcan/"
+        },        
         {
-            "icon": "fa fa-twitter",
-            "href": "#"
-        },
-        {
-            "icon": "fa fa-google-plus",
-            "href": "#"
-        },
-        {
-            "icon": "fa fa-youtube",
-            "href": "#"
-        },
-        {
-            "icon": "fa fa-linkedin",
-            "href": "#"
-        },
-        {
-            "icon": "fa fa-dribbble",
-            "href": "#"
+            "icon": "fa fa-instagram",
+            "href": "https://www.instagram.com/sandeli.sabores/"
         }
     ]
 }

@@ -84,8 +84,10 @@
 				Cart: "Carrito",
 				AddToCart: "Agregar al Carrito",
 				ContactInfo:"Información de Conctacto",
-				SocialNetworking:"Redes Sociales"
+				SocialNetworking:"Redes Sociales",
+				RecommendedItems:"Te Recomendados"
 			});
+
 			$translateProvider.translations('en', {
 				FeatureItems: 'Products',
 				Contact: 'Contact',
@@ -95,7 +97,8 @@
 				Cart: "Cart",
 				AddToCart: "Add to Cart",
 				ContactInfo:"Contact Info",
-				SocialNetworking:"Social Networking"
+				SocialNetworking:"Social Networking",
+				RecommendedItems:"Recommended Items"
 			});
 			$translateProvider.preferredLanguage('es');
 		}
