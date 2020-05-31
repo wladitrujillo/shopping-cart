@@ -24,12 +24,12 @@ var rename = require('gulp-rename');
 
 // include plug-ins
 var stripDebug = require('gulp-strip-debug');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
  
 // JS concat, strip debugging code and minify
 gulp.task('bundle-scripts', function() {
-var jsPath = {jsSrc:['./webapp/app.js','./webapp/config.js','./webapp/components/**/*.js'], jsDest:'./webapp/build'};
-  gulp.src(jsPath.jsSrc)
+var jsPath = {jsSrc:['./webapp/app.js','./webapp/config.js','./webapp/components/**/*.js'], jsDest:'./webapp'};
+  return gulp.src(jsPath.jsSrc)
     .pipe(concat('ngscripts.js'))
     .pipe(stripDebug())
     .pipe(uglify())
