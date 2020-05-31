@@ -3,7 +3,7 @@
 
     let app = angular.module('eShopper');
     app.component('slider', {
-        templateUrl: 'components/slider/slider.template.html',
+        templateUrl: 'components/slider/slider.template.min.html',
         controller: Controller
     });
 

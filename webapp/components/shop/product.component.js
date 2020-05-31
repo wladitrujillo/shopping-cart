@@ -5,7 +5,7 @@
 
     app.component('product', {
         bindings: { product: '<' },
-        templateUrl: 'components/shop/product.template.html',
+        templateUrl: 'components/shop/product.template.min.html',
         controller: Controller
     });
 

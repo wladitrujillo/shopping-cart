@@ -5,7 +5,7 @@
 
     app.component('blogList', {
         bindings: { blogs: '<' },
-        templateUrl: 'components/blogger/blog.list.template.html',
+        templateUrl: 'components/blogger/blog.list.template.min.html',
         controller: Controller
     });
 

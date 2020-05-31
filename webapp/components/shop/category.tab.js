@@ -3,7 +3,7 @@
     let app = angular.module("eShopper");
 
     app.component('categoryTab', {
-        templateUrl: 'components/shop/category.tab.html',
+        templateUrl: 'components/shop/category.tab.min.html',
         controller: CategoryTabCtrl
     });
 

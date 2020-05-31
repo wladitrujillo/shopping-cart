@@ -4,7 +4,7 @@
     let app = angular.module('eShopper');
     app.component('cart', {
         bindings: { items: '<' },
-        templateUrl: 'components/cart/cart.template.html',
+        templateUrl: 'components/cart/cart.template.min.html',
         controller: Controller
     });
 

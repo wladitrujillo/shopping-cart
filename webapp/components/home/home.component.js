@@ -4,7 +4,7 @@
 
     app.component('home', {
         bindings: { products: '<' },
-        templateUrl: 'components/home/home.template.html',
+        templateUrl: 'components/home/home.template.min.html',
         controller: HomeCtrl
     });
 

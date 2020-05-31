@@ -3,7 +3,7 @@
     let app = angular.module('eShopper');
 
     app.component('login', {
-        templateUrl: 'components/login/login.template.html',
+        templateUrl: 'components/login/login.template.min.html',
         controller: Controller
     });
 

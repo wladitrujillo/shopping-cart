@@ -5,7 +5,7 @@
 
     app.component('blog', {
         bindings: { blog: '<' },
-        templateUrl: 'components/blogger/blog.template.html',
+        templateUrl: 'components/blogger/blog.template..min.html',
         controller: Controller
     });
 

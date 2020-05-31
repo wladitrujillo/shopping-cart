@@ -3,7 +3,7 @@
     let app = angular.module("eShopper");
 
     app.component('headerComponent', {
-        templateUrl: 'components/header/header.template.html',
+        templateUrl: 'components/header/header.template.min.html',
         controller: HeaderCtrl
     });
 

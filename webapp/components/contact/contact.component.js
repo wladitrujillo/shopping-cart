@@ -3,7 +3,7 @@
     let app = angular.module("eShopper");
 
     app.component('contact', {
-        templateUrl: 'components/contact/contact.template.html',
+        templateUrl: 'components/contact/contact.template.min.html',
         controller: Controller
     });
 

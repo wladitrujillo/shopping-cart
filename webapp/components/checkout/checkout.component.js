@@ -3,7 +3,7 @@
     let app = angular.module("eShopper");
 
     app.component('checkout', {
-        templateUrl: 'components/checkout/checkout.template.html',
+        templateUrl: 'components/checkout/checkout.template.min.html',
         controller: Controller
     });
 

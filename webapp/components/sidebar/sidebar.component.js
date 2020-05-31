@@ -3,7 +3,7 @@
 
     let app = angular.module('eShopper');
     app.component('sidebar', {
-        templateUrl: 'components/sidebar/sidebar.template.html',
+        templateUrl: 'components/sidebar/sidebar.template.min.html',
         controller: Controller
     });
 

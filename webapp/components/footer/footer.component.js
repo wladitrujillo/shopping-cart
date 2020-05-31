@@ -3,7 +3,7 @@
     let app = angular.module("eShopper");
 
     app.component('footerComponent', {
-        templateUrl: 'components/footer/footer.template.html',
+        templateUrl: 'components/footer/footer.template.min.html',
         controller: FooterCtrl
     });
 

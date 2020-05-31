@@ -5,7 +5,7 @@
     let app = angular.module('eShopper');
 
     app.component('productList', {
-        templateUrl: 'components/shop/product.list.template.html',
+        templateUrl: 'components/shop/product.list.template.min.html',
         controller: Controller
     });
 

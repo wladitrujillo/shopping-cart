@@ -3,7 +3,7 @@
     let app = angular.module('eShopper');
 
     app.component('blogger', {       
-        templateUrl: 'components/blogger/blogger.template.html',
+        templateUrl: 'components/blogger/blogger.template.min.html',
         controller: Controller
     });
 

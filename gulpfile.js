@@ -30,7 +30,7 @@ gulp.task('minify-css', function () {
   var cssPath = { cssSrc: ['./content/css/*.css', '!*.min.css', '!/**/*.min.css'], cssDest: './webapp/css/' };
 
   return gulp.src(cssPath.cssSrc)
-    .pipe(concat('styles.css'))
+    .pipe(concat('style.css'))
     .pipe(autoprefix('last 2 versions'))
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
