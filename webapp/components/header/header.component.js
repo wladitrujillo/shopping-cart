@@ -7,34 +7,38 @@
         controller: HeaderCtrl
     });
 
-    HeaderCtrl.$inject = ['ShopperService']
+    HeaderCtrl.$inject = ['ShopperService', '$translate']
 
-    function HeaderCtrl(service) {
+    function HeaderCtrl(service, $translate) {
 
         service.getInfo().then(data => this.company = data);
+
+        this.changeLanguage = lang => {
+            $translate.use(lang);
+        }
 
 
         this.options = [
             /* { name: 'Account', href: '', icon: 'fa fa-user' },
              { name: 'Wishlist', href: '', icon: 'fa fa-star' },*/
             { name: 'Checkout', href: 'checkout', icon: 'fa fa-crosshairs' },
-            { name: 'Cart', href: 'cart', icon: 'fa fa-shopping-cart' },
+            { name: 'Carrito', href: 'cart', icon: 'fa fa-shopping-cart' },
             { name: 'Login', href: 'login', icon: 'fa fa-lock' }];
 
         this.menu = [
 
             {
-                name: "Home",
+                name: "Inicio",
                 href: "home"
             },
             {
-                name: "Shop",
+                name: "Compras",
                 href: "",
                 hasChilds: true,
                 childs: [
-                    { name: "Products", href: "product-list" },
+                    { name: "Productos", href: "product-list" },
                     { name: "Checkout", href: "checkout" },
-                    { name: "Cart", href: "cart" },
+                    { name: "Carrito", href: "cart" },
                     { name: "Login", href: "login" }]
             },
             {
@@ -42,7 +46,7 @@
                 href: "blogger"
             },
             {
-                name: "Contact",
+                name: "Contactanos",
                 href: "contact"
             }
         ]

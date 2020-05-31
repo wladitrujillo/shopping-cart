@@ -3,8 +3,8 @@
 
 	let app = angular.module('eShopper');
 
-	app.config(['$stateProvider', '$urlRouterProvider',
-		function config($stateProvider, $urlRouterProvider) {
+	app.config(['$stateProvider', '$urlRouterProvider', '$translateProvider',
+		function config($stateProvider, $urlRouterProvider, $translateProvider) {
 			$urlRouterProvider.otherwise("/")
 			// An array of state definitions
 			var states = [
@@ -72,6 +72,26 @@
 			states.forEach(function (state) {
 				$stateProvider.state(state);
 			});
+
+			//translate
+
+			$translateProvider.translations('es', {
+				FeatureItems: 'Productos',
+				Contactanos: 'Contactanos',
+				Inicio:"Inicio",
+				Compras:"Compras",
+				Productos:"Productos",
+				Carrito:"Carrito"				
+			});
+			$translateProvider.translations('en', {
+				FeatureItems: 'Products',
+				Contactanos: 'Contact',
+				Inicio:'Home',
+				Compras:"Shop",
+				Productos:"Products",				
+				Carrito:"Cart"					
+			});
+			$translateProvider.preferredLanguage('es');
 		}
 	]);
 

@@ -34,7 +34,7 @@
                         <a ui-sref="home"><img ng-src="{{$ctrl.company.logo}}" alt="" /></a>
                     </div>
                     <div class="btn-group pull-right clearfix">
-                        <div class="btn-group">
+                        <!--div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                 USA
                                 <span class="caret"></span>
@@ -43,16 +43,27 @@
                                 <li><a href="">Canada</a></li>
                                 <li><a href="">UK</a></li>
                             </ul>
-                        </div>
+                        </div-->
 
-                        <div class="btn-group">
+                        <!--div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                DOLLAR
+                                DOLLAE
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="">Canadian Dollar</a></li>
-                                <li><a href="">Pound</a></li>
+                                <li><a href="">Pound</a></li>                           
+                            </ul>
+                        </div-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                Idioma
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="" ng-click="$ctrl.changeLanguage('es')">Español</a></li>
+                                <li><a href="" ng-click="$ctrl.changeLanguage('en')">Ingles</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -62,7 +73,7 @@
                         <ul class="nav navbar-nav">
                             <li ng-repeat="o in $ctrl.options">
                                 <a href="#" ui-sref="{{o.href}}" ui-sref-active="active"><i
-                                        ng-class="o.icon"></i>{{o.name}}</a></li>
+                                        ng-class="o.icon"></i><span translate>{{o.name}}</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,16 +100,16 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li ng-repeat="me in $ctrl.menu" ng-class="{dropdown:me.hasChilds}">
-                                <a ng-if="me.hasChilds" href="#">{{me.name}}<i class="fa fa-angle-down"></i></a>
+                                <a ng-if="me.hasChilds" href="#"><span translate>{{me.name}}</span><i class="fa fa-angle-down"></i></a>
                                 <ul ng-if="me.hasChilds" role="menu" class="sub-menu">
                                     <li ng-repeat="child in me.childs">
-                                        <a ui-sref="{{child.href}}">{{child.name}}</a></li>
+                                        <a ui-sref="{{child.href}}"><span translate>{{child.name}}</span></a></li>
                                 </ul>
                                 <a ng-if="!me.hasChilds" href="#" ui-sref="{{me.href}}"
-                                    ui-sref-active="active">{{me.name}} </a>
-                            </li>                               
-                           
-                       
+                                    ui-sref-active="active"><span translate>{{me.name}}</span></a>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>
