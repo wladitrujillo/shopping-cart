@@ -46,7 +46,7 @@ function query(q, fields, sort, page, perPage) {
         }
 
         let products = JSON.parse(data);
-        console.log("init", page * perPage);
+     
 
         response.count = products.length;
         response.data = products.slice(page * perPage, (page * perPage) + perPage);
