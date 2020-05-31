@@ -2,3 +2,5 @@ node_modules/
 libs/
 logs/
 build/
+**/*.min.js
+**/*.min.html
