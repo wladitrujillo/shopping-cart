@@ -90,10 +90,20 @@
 				English: "Inglés",
 				Spanish: "Español",
 				Submit: "Enviar",
-				Name:"Nombre",
-				Email:"Email",
-				Subject:"Motivo",
-				YourMessageHere:"Tu mensaje aqui"
+				Name: "Nombre",
+				Email: "Email",
+				Subject: "Motivo",
+				YourMessageHere: "Tu mensaje aqui",
+				Quantity: "Cantidad",
+				Availability: "Disponibilidad",
+				Condition: "Condición",
+				Brand: "Marca",
+				InStock: "Disponible",
+				AllRightsReserved: "Todos Los Derechos Reservados",
+				DesignedBy: "Diseñado por",
+				AddToWishlist:"Agregar como deseado",
+				ViewDetail:"Ver Detalle"
+
 			});
 
 			$translateProvider.translations('en', {
@@ -111,10 +121,19 @@
 				English: "English",
 				Spanish: "Spanish",
 				Submit: "Submit",
-				Name:"Name",
-				Email:"Email",
-				Subject:"Subject",
-				YourMessageHere:"Your Message Here"
+				Name: "Name",
+				Email: "Email",
+				Subject: "Subject",
+				YourMessageHere: "Your Message Here",
+				Quantity: "Quantity",
+				Availability: "Availability",
+				Condition: "Condition",
+				Brand: "Brand",
+				InStock: "In Stock",
+				AllRightsReserved: "All Rights Reserved",
+				DesignedBy: "Designed by",
+				AddToWishlist:"Add to wishlist",
+				ViewDetail:"View Detail"
 			});
 			$translateProvider.preferredLanguage('es');
 		}
