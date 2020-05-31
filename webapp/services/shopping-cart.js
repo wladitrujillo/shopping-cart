@@ -1,7 +1,7 @@
 (function (angular) {
     'use strict';
     angular.module('eShopper')
-        .service(ShoppingCartService);
+        .service('ShoppingCartService', ShoppingCartService);
 
     function ShoppingCartService() {
         let items = [];

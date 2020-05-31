@@ -1,7 +1,7 @@
 (function (angular) {
     'use strict';
     angular.module('eShopper')
-        .service(ShopperService);
+        .service('ShopperService', ShopperService);
     ShopperService.$inject = ['$http'];
     function ShopperService($http) {
         var service = {
