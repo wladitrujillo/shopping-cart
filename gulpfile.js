@@ -44,9 +44,7 @@ var uglify = require('gulp-uglify-es').default;
 // JS concat, strip debugging code and minify
 gulp.task('bundle-scripts', function () {
   var jsPath = {
-    jsSrc: ['./webapp/app.js',
-      './webapp/config.js',
-      './webapp/services/*.js',
+    jsSrc: ['./webapp/services/*.js',
       './webapp/components/**/*.js',
       '!/**/*.min.js'],
     jsDest: './webapp/'
