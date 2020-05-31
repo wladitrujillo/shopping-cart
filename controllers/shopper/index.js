@@ -7,8 +7,11 @@ const ctrl = require('./shopper.ctrl');
 router.route('/info')
     .get(ctrl.getInfo);
 
-    router.route('/sliders')
+router.route('/sliders')
     .get(ctrl.getSliders);
+
+    router.route('/recommends')
+    .get(ctrl.getRecommends);
 
 router.route('/sendEmail')
     .put(ctrl.sendEmail);

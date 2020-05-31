@@ -4,20 +4,20 @@
         "subtitle": "Para toda ocasión",
         "text": "Disfruta nuestros pasteles el mejor sabor para toda ocasión",
         "slideImg": "images/home/banner1.jpg",
-        "promoImg": "images/home/pricing.png"
+        "promoImg": null
     },
     {
         "title": "Sandeli Sabores",
         "subtitle": "Los mejores precios",
         "text": "Entregamos a domicilio",
         "slideImg": "images/home/banner2.jpg",
-        "promoImg": "images/home/pricing.png"
+        "promoImg": null
     },
     {
         "title": "Sandeli Sabores",
         "subtitle": "Con la mejor calidad",
         "text": "Contactanos o escribenos a nuestro correo electrónico",
         "slideImg": "images/home/banner3.jpg",
-        "promoImg": "images/home/pricing.png"
+        "promoImg": null
     }
 ]

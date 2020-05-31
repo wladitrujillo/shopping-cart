@@ -6,6 +6,7 @@ const logger = require('log4js').getLogger("ShopperController");
 
 module.exports.getInfo = getInfo;
 module.exports.getSliders = getSliders;
+module.exports.getRecommends = getRecommends;
 module.exports.sendEmail = sendEmail;
 
 function getInfo(req, res) {
@@ -19,6 +20,14 @@ function getInfo(req, res) {
 function getSliders(req, res) {
 
     shopperService.getSliders()
+        .then(data => onSuccess(data, res))
+        .catch(err => onError(err, res));
+
+}
+
+function getRecommends(req, res) {
+
+    shopperService.getRecommends()
         .then(data => onSuccess(data, res))
         .catch(err => onError(err, res));
 

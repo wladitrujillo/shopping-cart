@@ -19,7 +19,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <img ng-src="{{slider.slideImg}}" class="girl img-responsive" alt="" />
-                                <img ng-src="{{slider.promoImg}}" class="pricing" alt="" />
+                                <img ng-if="slider.promoImg" ng-src="{{slider.promoImg}}" class="pricing" alt="" />
                             </div>
                         </div>
 

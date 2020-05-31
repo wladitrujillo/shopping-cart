@@ -7,10 +7,11 @@
         controller: RecommendedListCtrl
     });
 
-    RecommendedListCtrl.$inject = ['$scope'];
+    RecommendedListCtrl.$inject = ['ShopperService'];
 
-    function RecommendedListCtrl($scope) {
+    function RecommendedListCtrl(ShopperService) {
 
+        ShopperService.getRecommends().then(data => this.recommends = data)
     }
 
 
