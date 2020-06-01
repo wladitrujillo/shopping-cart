@@ -19,7 +19,7 @@ function post(req, res) {
             // Gets the message. entry.messaging is an array, but 
             // will only ever contain one message, so we get index 0
             let webhook_event = entry.messaging[0];
-            console.log(webhook_event);
+            logger.debug(webhook_event);
         });
 
         // Returns a '200 OK' response to all requests
@@ -48,7 +48,7 @@ function get(req, res) {
         if (mode === 'subscribe' && token === VERIFY_TOKEN) {
 
             // Responds with the challenge token from the request
-            console.log('WEBHOOK_VERIFIED');
+            logger.debug('WEBHOOK_VERIFIED');
             res.status(200).send(challenge);
 
         } else {
