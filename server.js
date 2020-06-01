@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'webapp')));
 
 // public routes
+app.use('/webhook', require('./controllers/facebook'));
 app.use('/shopper', require('./controllers/shopper'));
 app.use('/product', require('./controllers/product'));
 app.use('/blog', require('./controllers/blog'));
