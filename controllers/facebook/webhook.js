@@ -33,9 +33,8 @@ function post(req, res) {
 
 function get(req, res) {
 
-    // Your verify token. Should be a random string.
-    let VERIFY_TOKEN = "EAAlr12mmZCbgBAIbTMrLoOMHbJJZCphG7Adg4NPwFqfw9RPlRYxKQGh9GTCABj2HDZBdp44vsrBn1OowUI7hEaLC1MMjP9ZBZBuQZAubqtXSNnpGZB8dtIg07DRV5px2n7sQ1z9zCKyK5ZBW4ij9WF4YugZBV9KwdAH78yZBrarUI5F8XuVDmntXtJ";
-
+    
+ 
     // Parse the query params
     let mode = req.query['hub.mode'];
     let token = req.query['hub.verify_token'];
@@ -44,8 +43,9 @@ function get(req, res) {
     // Checks if a token and mode is in the query string of the request
     if (mode && token) {
 
+        // Your verify token. Should be a random string.
         // Checks the mode and token sent is correct
-        if (mode === 'subscribe' && token === VERIFY_TOKEN) {
+        if (mode === 'subscribe' && token === process.env.PORT.VERIFY_TOKEN) {
 
             // Responds with the challenge token from the request
             logger.debug('WEBHOOK_VERIFIED');

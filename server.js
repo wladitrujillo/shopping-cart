@@ -5,13 +5,15 @@ const log4js = require('log4js');
 const fs = require('fs');
 const http = require("http");
 const https = require("https");
+const dotenv = require('dotenv');
 
 const app = express();
-const port = 3000;
+
 
 
 //initializations
 log4js.configure('./config/log4js.json');
+dotenv.config();
 //seteo en middleware manejo de json
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'webapp')));
@@ -22,4 +24,6 @@ app.use('/shopper', require('./controllers/shopper'));
 app.use('/product', require('./controllers/product'));
 app.use('/blog', require('./controllers/blog'));
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+console.log(`Loading PORT ${process.env.PORT} environment ${process.env.NODE_ENV}`);
+const port = process.env.PORT;
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`))

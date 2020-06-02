@@ -4,3 +4,4 @@ logs/
 build/
 **/*.min.js
 **/*.min.html
+.env
