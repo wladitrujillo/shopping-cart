@@ -31,9 +31,7 @@ function post(req, res) {
 }
 
 
-function get(req, res) {
-
-    
+function get(req, res) {    
  
     // Parse the query params
     let mode = req.query['hub.mode'];
