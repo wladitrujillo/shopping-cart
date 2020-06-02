@@ -29,7 +29,23 @@ app.use(express.static(path.join(__dirname, 'webapp')));
 app.use('/webhook', bot.middleware());
 // Setup listener for incoming messages
 bot.on('message', (userId, message) => {
-    bot.sendTextMessage(userId, 'Echo Message:' + message);
+      // Send text message
+    // bot.sendTextMessage(userId, "Echo Message:" + message);
+
+    // Send quick replies
+    var replies = [
+        {
+            "content_type": "text",
+            "title": "👍",
+            "payload": "thumbs_up"
+        },
+        {
+            "content_type": "text",
+            "title": "👎",
+            "payload": "thumbs_down"
+        }
+    ];
+    bot.sendQuickReplies(userId, message, replies);
 });
 // public routes
 app.use('/shopper', require('./controllers/shopper'));
