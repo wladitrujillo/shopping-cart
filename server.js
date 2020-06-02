@@ -19,17 +19,19 @@ let bot = new FBBotFramework({
     page_token: process.env.PAGE_ACCESS_TOKEN,
     verify_token: process.env.VERIFY_TOKEN
 });
-// Setup listener for incoming messages
-bot.on('message', (userId, message) => {
-    bot.sendTextMessage(userId, 'Echo Message:' + message);
-});
+
 //seteo en middleware manejo de json
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'webapp')));
 
-// public routes
+//facebook webook
 //app.use('/webhook', require('./controllers/facebook'));
 app.use('/webhook', bot.middleware());
+// Setup listener for incoming messages
+bot.on('message', (userId, message) => {
+    bot.sendTextMessage(userId, 'Echo Message:' + message);
+});
+// public routes
 app.use('/shopper', require('./controllers/shopper'));
 app.use('/product', require('./controllers/product'));
 app.use('/blog', require('./controllers/blog'));
