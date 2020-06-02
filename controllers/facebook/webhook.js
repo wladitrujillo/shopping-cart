@@ -1,5 +1,6 @@
 'use strict';
 const request = require('request');
+const apiAiClient = require('apiai')(process.env.API_AI_TOKEN);
 const logger = require('log4js').getLogger("webhook");
 
 module.exports.post = post;
@@ -69,10 +70,30 @@ function get(req, res) {
 
 }
 
+function handleMessage(sender_psid, received_message) {
+    logger.log("Handle Message", received_message);
+
+    var request = app.textRequest(received_message, {
+        sessionId: 'sandeli_sabores_bot'
+    });
+
+    request.on('response', function (response) {
+        logger.log("Response", response);
+        // Send the response message
+        callSendAPI(sender_psid, response);
+    });
+
+    request.on('error', function (error) {
+        logger.error("Error", error);
+    });
+
+    request.end();
+}
+
 
 
 // Handles messages events
-function handleMessage(sender_psid, received_message) {
+function handleMessageOld(sender_psid, received_message) {
 
     let response;
 
