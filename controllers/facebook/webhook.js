@@ -77,8 +77,11 @@ function handleMessage(sender_psid, received_message) {
 
     request.on('response', response => {
         logger.debug("Response", response);
-        let text = response.result.fulfillment.speech;
-        callSendAPI(sender_psid, text);
+
+        let speech = {
+            "text": response.result.fulfillment.speech
+        }
+        callSendAPI(sender_psid, speech);
     });
 
     request.on('error', function (error) {
