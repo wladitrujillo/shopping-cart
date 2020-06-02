@@ -71,14 +71,14 @@ function get(req, res) {
 }
 
 function handleMessage(sender_psid, received_message) {
-    logger.log("Handle Message", received_message.text);
+    logger.debug("Handle Message", received_message.text);
 
     var request = app.textRequest(received_message.text, {
         sessionId: 'sandeli_sabores_bot'
     });
 
     request.on('response', function (response) {
-        logger.log("Response", response);
+        logger.debug("Response", response);
         // Send the response message
         callSendAPI(sender_psid, response);
     });
