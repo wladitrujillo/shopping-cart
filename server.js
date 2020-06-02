@@ -7,7 +7,7 @@ const http = require("http");
 const https = require("https");
 const dotenv = require('dotenv');
 
-const FBBotFramework = require('fb -bot-framework');
+const FBBotFramework = require('fb-bot-framework');
 
 
 const app = express();
