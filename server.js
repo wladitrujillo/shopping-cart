@@ -7,48 +7,18 @@ const http = require("http");
 const https = require("https");
 const dotenv = require('dotenv');
 
-const FBBotFramework = require('fb-bot-framework');
-
-
 const app = express();
 
 //initializations
 log4js.configure('./config/log4js.json');
 dotenv.config();
-let bot = new FBBotFramework({
-    page_token: process.env.PAGE_ACCESS_TOKEN,
-    verify_token: process.env.VERIFY_TOKEN
-});
 
 //seteo en middleware manejo de json
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'webapp')));
 
 //facebook webook
-//app.use('/webhook', require('./controllers/facebook'));
-app.use('/webhook', bot.middleware());
-// Setup listener for incoming messages
-bot.on('message', (userId, message) => {
-
-    console.log("message==>", message);
-      // Send text message
-    // bot.sendTextMessage(userId, "Echo Message:" + message);
-
-    // Send quick replies
-    var replies = [
-        {
-            "content_type": "text",
-            "title": "👍",
-            "payload": "thumbs_up"
-        },
-        {
-            "content_type": "text",
-            "title": "👎",
-            "payload": "thumbs_down"
-        }
-    ];
-    bot.sendQuickReplies(userId, message, replies);
-});
+app.use('/webhook', require('./controllers/facebook'));
 // public routes
 app.use('/shopper', require('./controllers/shopper'));
 app.use('/product', require('./controllers/product'));
