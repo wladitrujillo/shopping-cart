@@ -43,7 +43,7 @@ function get(req, res) {
 
         // Your verify token. Should be a random string.
         // Checks the mode and token sent is correct
-        if (mode === 'subscribe' && token === process.env.PORT.VERIFY_TOKEN) {
+        if (mode === 'subscribe' && token === process.env.VERIFY_TOKEN) {
 
             // Responds with the challenge token from the request
             logger.debug('WEBHOOK_VERIFIED');
