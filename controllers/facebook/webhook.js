@@ -8,9 +8,7 @@ module.exports.get = get;
 
 
 function post(req, res) {
-    logger.debug("WebHook post", req.body.object);
     let body = req.body;
-
     // Checks this is an event from a page subscription
     if (body.object === 'page') {
 
@@ -71,16 +69,16 @@ function get(req, res) {
 }
 
 function handleMessage(sender_psid, received_message) {
-    logger.debug("Handle Message", received_message.text);
-
-    let request = apiAiClient.textRequest(received_message.text, {
+    let message = received_message.text;
+    logger.debug("handleMessage", message);
+    let request = apiAiClient.textRequest(message, {
         sessionId: 'sandeli_sabores_bot'
     });
 
-    request.on('response', function (response) {
+    request.on('response', response => {
         logger.debug("Response", response);
-        // Send the response message
-        callSendAPI(sender_psid, response);
+        let text = response.result.fulfillment.speech;
+        callSendAPI(sender_psid, text);
     });
 
     request.on('error', function (error) {
