@@ -73,7 +73,7 @@ function get(req, res) {
 function handleMessage(sender_psid, received_message) {
     logger.debug("Handle Message", received_message.text);
 
-    var request = app.textRequest(received_message.text, {
+    let request = apiAiClient.textRequest(received_message.text, {
         sessionId: 'sandeli_sabores_bot'
     });
 
