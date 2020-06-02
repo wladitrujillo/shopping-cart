@@ -43,5 +43,5 @@ bot.on('message', (userId, message) => {
     });
 });
 
-module.exports = bot.middleware();
-//module.exports = router;
+//module.exports = bot.middleware();
+module.exports = router;
