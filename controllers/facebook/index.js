@@ -37,7 +37,10 @@ bot.on('message', (userId, message) => {
             "payload": "thumbs_down"
         }
     ];
-    bot.sendQuickReplies(userId, message, replies);
+    bot.sendQuickReplies(userId, message, replies, (err, data) => {
+        if (err) console.error(err);
+        else console.log(data);
+    });
 });
 
 module.exports = bot.middleware();
