@@ -8,7 +8,7 @@ module.exports.get = get;
 
 
 function post(req, res) {
-    logger.log("WebHook post", req.body.object);
+    logger.debug("WebHook post", req.body.object);
     let body = req.body;
 
     // Checks this is an event from a page subscription
@@ -173,9 +173,9 @@ function callSendAPI(sender_psid, response) {
         "json": request_body
     }, (err, res, body) => {
         if (!err) {
-            console.log('message sent!')
+            logger.debug('message sent!')
         } else {
-            console.error("Unable to send message:" + err);
+            logger.error("Unable to send message:", err);
         }
     });
 }
