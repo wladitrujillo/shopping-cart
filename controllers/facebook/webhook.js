@@ -8,7 +8,7 @@ module.exports.get = get;
 
 
 function post(req, res) {
-
+    logger.log("WebHook post", req.body.object);
     let body = req.body;
 
     // Checks this is an event from a page subscription
@@ -71,9 +71,9 @@ function get(req, res) {
 }
 
 function handleMessage(sender_psid, received_message) {
-    logger.log("Handle Message", received_message);
+    logger.log("Handle Message", received_message.text);
 
-    var request = app.textRequest(received_message, {
+    var request = app.textRequest(received_message.text, {
         sessionId: 'sandeli_sabores_bot'
     });
 
