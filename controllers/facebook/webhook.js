@@ -34,7 +34,7 @@ function post(req, res) {
 function get(req, res) {
 
     // Your verify token. Should be a random string.
-    let VERIFY_TOKEN = "HFLKJ465JWE3404JLK32J4ESI3LWLQWRUIO33WLL2K23NL325652323LLWLASDFA38DJJSFDA98";
+    let VERIFY_TOKEN = "EAAlr12mmZCbgBAIbTMrLoOMHbJJZCphG7Adg4NPwFqfw9RPlRYxKQGh9GTCABj2HDZBdp44vsrBn1OowUI7hEaLC1MMjP9ZBZBuQZAubqtXSNnpGZB8dtIg07DRV5px2n7sQ1z9zCKyK5ZBW4ij9WF4YugZBV9KwdAH78yZBrarUI5F8XuVDmntXtJ";
 
     // Parse the query params
     let mode = req.query['hub.mode'];
