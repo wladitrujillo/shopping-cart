@@ -29,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'webapp')));
 app.use('/webhook', bot.middleware());
 // Setup listener for incoming messages
 bot.on('message', (userId, message) => {
+
+    console.log("message==>", message);
       // Send text message
     // bot.sendTextMessage(userId, "Echo Message:" + message);
 
