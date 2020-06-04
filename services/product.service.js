@@ -1,7 +1,7 @@
 'use strict';
 
-const fs = require('fs');
 const Q = require('q');
+const product = require('../models/./product');
 const logger = require('log4js').getLogger("ProductService");
 
 module.exports.query = query;
@@ -10,6 +10,10 @@ module.exports.get = get;
 const dataFolder = "./data/sandeli";
 
 function query(q, fields, sort, page, perPage) {
+
+
+    logger.debug("Init query");
+
 
     let criteria = {};
     let response = {};
@@ -38,24 +42,34 @@ function query(q, fields, sort, page, perPage) {
         }
     }
 
-    fs.readFile(dataFolder + '/product.json', (err, data) => {
+    product.find(criteria).count(function (error, count) {
 
-        if (err) {
-            logger.error("Service error", err);
-            deferred.reject({ message: err });
+
+       
+        if (error) {
+            logger.error("Error", error);
+            deferred.reject({ message: error });
         }
 
-        let products = JSON.parse(data);
-     
 
-        response.count = products.length;
-        response.data = products.slice(page * perPage, (page * perPage) + perPage);
+        response.count = count;
+        //exec me permite dar mas especificaciones a find
+        product.find(criteria)
+            .select(fields)
+            .skip(perPage * page)
+            .limit(perPage)
+            .sort(sort)
+            .exec(function (error, data) {
+                if (error) {
+                    logger.error("Service error", error);
+                    deferred.reject({ message: error });
+                }
 
-        deferred.resolve(response);
+                response.data = data;
+                deferred.resolve(response);
+            });
 
     });
-
-
 
     return deferred.promise;
 }
@@ -66,23 +80,17 @@ function query(q, fields, sort, page, perPage) {
  * GetInfo
  * @param {*} id 
  */
-function get(id) {
-    logger.debug("get", id);
-
+function get(_id) {
+    logger.debug("get start by id");
     var deferred = Q.defer();
+    product.findOne(
+        { _id: _id },
+        function (err, object) {
+            if (err)
+                deferred.reject(err);
 
-    fs.readFile(dataFolder + '/product.json', (err, data) => {
-
-        if (err) {
-            logger.error("Service error", err);
-            deferred.reject({ message: err });
-        }
-
-        let products = JSON.parse(data);
-
-        deferred.resolve(products.find(p => p.id == id));
-
-    });
+            deferred.resolve(object);
+        });
 
     return deferred.promise;
 }

@@ -6,12 +6,17 @@ const fs = require('fs');
 const http = require("http");
 const https = require("https");
 const dotenv = require('dotenv');
+const mongoose = require('mongoose');
 
 const app = express();
 
 //initializations
 log4js.configure('./config/log4js.json');
 dotenv.config();
+//Conexión a la base mongodb    
+mongoose.connect(process.env.MONGODB_URL, { })
+    .catch(err => logger.error(err));
+
 
 //seteo en middleware manejo de json
 app.use(bodyParser.json());

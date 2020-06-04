@@ -1,242 +1,242 @@
 [
     {
-        "id": 1,
+       
         "imgUrl": "images/cakes/1.jpeg",
         "price": 25,
-        "description": "Torta red vel vet",
-        "isNew": false,
+        "name": "Torta red vel vet",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 2,
+      
         "imgUrl": "images/cakes/2.jpeg",
         "price": 25,
-        "description": "Brazo de Gitano de chocolate de frambruesas",
-        "isNew": false,
+        "name": "Brazo de Gitano de chocolate de frambruesas",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 3,
+       
         "imgUrl": "images/cakes/3.jpeg",
         "price": 21,
-        "description": "Brazo de Gitano de chocolate",
-        "isNew": false,
+        "name": "Brazo de Gitano de chocolate",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 4,
+        
         "imgUrl": "images/cakes/4.jpeg",
         "price": 21,
-        "description": "Pionono relleno de fresas",
-        "isNew": false,
+        "name": "Pionono relleno de fresas",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 5,
+       
         "imgUrl": "images/cakes/5.jpeg",
         "price": 22,
-        "description": "Pionono relleno de piña",
-        "isNew": false,
+        "name": "Pionono relleno de piña",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 6,
+        
         "imgUrl": "images/cakes/6.jpeg",
         "price": 25,
-        "description": "Torta de chocolate",
-        "isNew": false,
+        "name": "Torta de chocolate",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 7,
+       
         "imgUrl": "images/cakes/7.jpeg",
         "price": 18,
-        "description": "Torta de maqueño",
-        "isNew": false,
+        "name": "Torta de maqueño",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 8,
+       
         "imgUrl": "images/cakes/8.jpeg",
         "price": 25,
-        "description": "Torta mojada",
-        "isNew": false,
+        "name": "Torta mojada",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 9,
+        
         "imgUrl": "images/cakes/9.jpeg",
         "price": 25,
-        "description": "Torta Selva Negra",
-        "isNew": true,
+        "name": "Torta Selva Negra",
+        "isNewProduct": true,
         "isSale": false
     },
     {
-        "id": 10,
+        
         "imgUrl": "images/cakes/10.jpeg",
         "price": 22,
-        "description": "Torta de chocolate con banano",
-        "isNew": false,
+        "name": "Torta de chocolate con banano",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 11,
+       
         "imgUrl": "images/cakes/11.jpeg",
         "price": 25,
-        "description": "Pionono de chocolate relleno de crema pastelera y frutas exóticas ",
-        "isNew": false,
+        "name": "Pionono de chocolate relleno de crema pastelera y frutas exóticas ",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 12,
+       
         "imgUrl": "images/cakes/12.jpeg",
         "price": 25,
-        "description": "Torta de camote con almendras,pasas y nueces cubierta de chocolate blanco",
-        "isNew": false,
+        "name": "Torta de camote con almendras,pasas y nueces cubierta de chocolate blanco",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 13,
+       
         "imgUrl": "images/cakes/tresLeches.jpeg",
         "price": 25,
-        "description": "Torta tres leches",
-        "isNew": false,
+        "name": "Torta tres leches",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 14,
+     
         "imgUrl": "images/cakes/plazaSesamo.jpeg",
         "price": 25,
-        "description": "Torta Plaza Sesamo (vainilla, chocolate, naranja, etc)",
-        "isNew": true,
+        "name": "Torta Plaza Sesamo (vainilla, chocolate, naranja, etc)",
+        "isNewProduct": true,
         "isSale": false
     },
     {
-        "id": 15,
+       
         "imgUrl": "images/cakes/selvaNegra.jpeg",
         "price": 25,
-        "description": "Torta Selva Negra",
-        "isNew": false,
+        "name": "Torta Selva Negra",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 16,
+        
         "imgUrl": "images/cakes/tortaDeZanahoria.jpeg",
         "price": 22,
-        "description": "Torta de zanahoria",
-        "isNew": false,
+        "name": "Torta de zanahoria",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 17,
+      
         "imgUrl": "images/cakes/tortaSelvaNegra3.jpeg",
         "price": 25,
-        "description": "Torta Selva Negra ",
-        "isNew": false,
+        "name": "Torta Selva Negra ",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 18,
+        
         "imgUrl": "images/cakes/tortaMargarita.jpeg",
         "price": 24,
-        "description": "Torta Margarita rellena de frutas",
-        "isNew": false,
+        "name": "Torta Margarita rellena de frutas",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 19,
+        
         "imgUrl": "images/cakes/tortaTresLeches2c.jpeg",
         "price": 25,
-        "description": "Torta tres leches ",
-        "isNew": false,
+        "name": "Torta tres leches ",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 20,
+       
         "imgUrl": "images/cakes/tortaChirimoya.jpeg",
         "price": 22,
-        "description": "Torta de chirimoya ",
-        "isNew": false,
+        "name": "Torta de chirimoya ",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 21,
+       
         "imgUrl": "images/cakes/tortaVainilla.jpeg",
         "price": 22,
-        "description": "Torta de vainilla",
-        "isNew": false,
+        "name": "Torta de vainilla",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 22,
+     
         "imgUrl": "images/cakes/tortaRedvelvet.jpeg",
         "price": 25,
-        "description": "Torta Red vel vet",
-        "isNew": false,
+        "name": "Torta Red vel vet",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 23,
+        
         "imgUrl": "images/cakes/tortaTiramisu1.jpeg",
         "price": 23,
-        "description": "Torta de Tiramisú",
-        "isNew": false,
+        "name": "Torta de Tiramisú",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 24,
+       
         "imgUrl": "images/cakes/tortaTiramisu2.jpeg",
         "price": 23,
-        "description": "Torta de Tiramisú",
-        "isNew": false,
+        "name": "Torta de Tiramisú",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 25,
+      
         "imgUrl": "images/cakes/25.jpeg",
         "price": 25,
-        "description": "Torta de Tiramisú",
-        "isNew": false,
+        "name": "Torta de Tiramisú",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 26,
+        
         "imgUrl": "images/cakes/tortaMarmoleada.jpeg",
         "price": 20,
-        "description": "Torta Marmoleada",
-        "isNew": false,
+        "name": "Torta Marmoleada",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 27,
+      
         "imgUrl": "images/cakes/27.jpeg",
         "price": 25,
-        "description": "Easy Polo Black Edition",
-        "isNew": false,
+        "name": "Easy Polo Black Edition",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 28,
+       
         "imgUrl": "images/cakes/28.jpeg",
         "price": 25,
-        "description": "Easy Polo Black Edition",
-        "isNew": true,
+        "name": "Easy Polo Black Edition",
+        "isNewProduct": true,
         "isSale": false
     },
     {
-        "id": 29,
+  
         "imgUrl": "images/cakes/29.jpeg",
         "price": 25,
-        "description": "Easy Polo Black Edition",
-        "isNew": false,
+        "name": "Easy Polo Black Edition",
+        "isNewProduct": false,
         "isSale": false
     },
     {
-        "id": 30,
+        
         "imgUrl": "images/cakes/30.jpeg",
         "price": 25,
-        "description": "Easy Polo Black Edition",
-        "isNew": false,
+        "name": "Easy Polo Black Edition",
+        "isNewProduct": false,
         "isSale": false
     }
 ]
