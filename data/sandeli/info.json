@@ -2,7 +2,7 @@
     "name": "Sandeli Sabores Inc.",
     "address": "Carcelen",
     "country": "Ecuador - Quito",
-    "phone": "+593 0983405635",
+    "phone": "+593 098 475 4728",
     "fax": null,
     "email": "sandefes@hotmail.com",
     "logo": "images/home/sandeli.png",
@@ -10,7 +10,7 @@
     "networks": [
         {
             "icon": "fa fa-facebook",
-            "href": "https://www.facebook.com/ceci.tulcan/"
+            "href": "https://www.facebook.com/Sandeli-Sabores-104750651268516/"
         },
         {
             "icon": "fa fa-instagram",
@@ -18,7 +18,7 @@
         },
         {
             "icon": "fa fa-whatsapp",
-            "href": "https://wa.me/+593983405635"
+            "href": "https://wa.me/+5930984754728"
         }
     ]
 }
