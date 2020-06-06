@@ -44,6 +44,18 @@ let Company = new Schema({
         required: false,
         trim: true
     },
+    position: {
+        latitude: {
+            type: Number,
+            required: true,
+            default: 0.0
+        },
+        longitude: {
+            type: Number,
+            required: true,
+            default: 0.0
+        }
+    },
     networks: [
         {
             icon: {

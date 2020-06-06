@@ -1,6 +1,6 @@
 angular.module("eShopper")
     .component('checkout', {
-        templateUrl: 'components/checkout/checkout.template.min.html',
+        templateUrl: 'components/checkout/checkout.template.html',
         controller: function () { }
     });
 

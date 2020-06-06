@@ -29,7 +29,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "prestart": "npm run minify-css && npm run minify-html && npm run bundle-scripts",
     "minify-html": "gulp minify-html",
     "bundle-scripts": "gulp bundle-scripts",
     "minify-css": "gulp minify-css"

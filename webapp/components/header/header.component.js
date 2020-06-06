@@ -1,6 +1,6 @@
 angular.module("eShopper")
     .component('headerComponent', {
-        templateUrl: 'components/header/header.template.min.html',
+        templateUrl: 'components/header/header.template.html',
         controller: ['ShopperService', '$translate',
             function (service, $translate) {
 

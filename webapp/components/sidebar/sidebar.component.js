@@ -1,5 +1,5 @@
 angular.module('eShopper').component('sidebar', {
-    templateUrl: 'components/sidebar/sidebar.template.min.html',
+    templateUrl: 'components/sidebar/sidebar.template.html',
     controller: ['$scope', '$timeout',
         function ($scope, $timeout) {
 

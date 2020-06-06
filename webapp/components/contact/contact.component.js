@@ -1,10 +1,15 @@
 
 angular.module("eShopper")
     .component('contact', {
-        templateUrl: 'components/contact/contact.template.min.html',
+        templateUrl: 'components/contact/contact.template.html',
         controller: ['ShopperService', function (service) {
 
-            service.getInfo().then(data => this.company = data);
+            let map = {};
+
+            service.getInfo().then(data => {
+                this.company = data;
+                showMap(this.company.position);
+            });
 
 
             this.emailBody = {
@@ -24,96 +29,83 @@ angular.module("eShopper")
                     });
             }
 
-            /* var map;
-     
-             map = new GMaps({
-                 el: '#gmap',
-                 lat: 43.1580159,
-                 lng: -77.6030777,
-                 scrollwheel: false,
-                 zoom: 14,
-                 zoomControl: false,
-                 panControl: false,
-                 streetViewControl: false,
-                 mapTypeControl: false,
-                 overviewMapControl: false,
-                 clickable: false
-             });
-     
-             var image = 'images/map-icon.png';
-             map.addMarker({
-                 lat: 43.1580159,
-                 lng: -77.6030777,
-                 //icon: image,
-                 animation: google.maps.Animation.DROP,
-                 verticalAlign: 'bottom',
-                 horizontalAlign: 'center',
-                 backgroundColor: '#ffffff',
-             });
-     
-             var styles = [
-     
-                 {
-                     "featureType": "road",
-                     "stylers": [
-                         {
-                             "color": ""
-                         }
-                     ]
-                 }, {
-                     "featureType": "water",
-                     "stylers": [
-                         {
-                             "color": "#A2DAF2"
-                         }
-                     ]
-                 }, {
-                     "featureType": "landscape",
-                     "stylers": [
-                         {
-                             "color": "#ABCE83"
-                         }
-                     ]
-                 }, {
-                     "elementType": "labels.text.fill",
-                     "stylers": [
-                         {
-                             "color": "#000000"
-                         }
-                     ]
-                 }, {
-                     "featureType": "poi",
-                     "stylers": [
-                         {
-                             "color": "#2ECC71"
-                         }
-                     ]
-                 }, {
-                     "elementType": "labels.text",
-                     "stylers": [
-                         {
-                             "saturation": 1
-                         },
-                         {
-                             "weight": 0.1
-                         },
-                         {
-                             "color": "#111111"
-                         }
-                     ]
-                 }
-     
-             ];
-     
-             map.addStyle({
-                 styledMapName: "Styled Map",
-                 styles: styles,
-                 mapTypeId: "map_style"
-             });
-     
-             map.setStyle("map_style");*/
-        }
 
-        ]
+            function showMap(position) {
+
+
+
+                map = new GMaps({
+                    el: '#gmap',
+                    lat: position.latitude,
+                    lng: position.longitude,
+                    scrollwheel: false,
+                    zoom: 14,
+                    zoomControl: false,
+                    panControl: false,
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    overviewMapControl: false,
+                    clickable: false
+                });
+
+
+                addMarker(position, map)
+
+                showCurrentPosition()
+
+            }
+
+
+
+            function showCurrentPosition() {
+
+
+                if (navigator.geolocation) {
+
+                    navigator.geolocation.getCurrentPosition(position => {
+
+
+                        var lat = Number(position.coords.latitude);
+                        var lng = Number(position.coords.longitude);
+
+
+
+                        // map.setCenter(new google.maps.LatLng(lat, lng));
+
+                        addMarker(position.coords, map, "Tu Estas Aqui")
+
+
+                    });
+                } else {
+                    console.error("Geolocation is not supported by this browser.");
+                }
+
+
+            }
+
+
+            // Adds a marker to the map.
+            function addMarker(location, map, label) {
+                // Add the marker at the clicked location, and add the next-available label
+                // from the array of alphabetical characters.
+
+
+                map.addMarker({
+                    lat: location.latitude,
+                    lng: location.longitude,
+                    //icon: image,
+                    label: label ? label : '',
+                    animation: google.maps.Animation.DROP,
+                    verticalAlign: 'bottom',
+                    horizontalAlign: 'center',
+                    backgroundColor: '#ffffff',
+                });
+
+            }
+
+
+
+
+        }]
     });
 

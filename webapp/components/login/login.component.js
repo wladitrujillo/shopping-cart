@@ -1,6 +1,6 @@
 angular.module('eShopper')
     .component('login', {
-        templateUrl: 'components/login/login.template.min.html',
+        templateUrl: 'components/login/login.template.html',
         controller: function () { }
     });
 

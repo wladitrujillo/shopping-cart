@@ -1,7 +1,7 @@
 
 angular.module('eShopper')
     .component('productList', {
-        templateUrl: 'components/shop/product.list.template.min.html',
+        templateUrl: 'components/shop/product.list.template.html',
         controller: ['ShoppingCartService', 'ProductService',
             function (ShoppingCartService, ProductService) {
 

@@ -1,17 +1,19 @@
 <div id="contact-page" class="container">
     <div class="bg">
-        <!--div class="row">
+        <h2 class="title text-center" translate>Contact</h2>
+        <div class="row">
             <div class="col-sm-12">
-                <h2 class="title text-center">Contact <strong>Us</strong></h2>
-                <div id="gmap" class="contact-map">
-                </div>
+
+                <div id="gmap" class="contact-map"></div>
+
+
             </div>
-        </div-->
+        </div>
         <div class="row">
             <div class="col-sm-8">
 
                 <div class="contact-form">
-                    <h2 class="title text-center" translate>Contact</h2>
+
                     <div class="status alert alert-success" style="display: none"></div>
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
                         <div class="form-group col-md-6">
@@ -28,11 +30,12 @@
                         </div>
                         <div class="form-group col-md-12">
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"
-                                placeholder="{{'YourMessageHere'|translate}}" ng-model="$ctrl.emailBody.message"></textarea>
+                                placeholder="{{'YourMessageHere'|translate}}"
+                                ng-model="$ctrl.emailBody.message"></textarea>
                         </div>
                         <div class="form-group col-md-12">
-                            <input type="submit" name="submit" class="btn btn-primary pull-right" value="{{'Submit'|translate}}"
-                                ng-click="$ctrl.sendEmail($ctrl.emailBody)">
+                            <input type="submit" name="submit" class="btn btn-primary pull-right"
+                                value="{{'Submit'|translate}}" ng-click="$ctrl.sendEmail($ctrl.emailBody)">
 
 
                         </div>
