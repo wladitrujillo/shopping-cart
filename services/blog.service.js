@@ -1,16 +1,15 @@
 'use strict';
 
-const fs = require('fs');
+
 const Q = require('q');
-const logger = require('log4js').getLogger("ProductService");
+const blog = require('../models/./blog');
+const logger = require('log4js').getLogger("BlogService");
 
 module.exports.query = query;
 module.exports.get = get;
 
-const dataFolder = "./data/sandeli";
 
-function query(user, q, fields, sort, page, perPage) {
-    logger.debug("Init query");
+function query(q, fields, sort, page, perPage) {
 
     let criteria = {};
     let response = {};
@@ -19,7 +18,6 @@ function query(user, q, fields, sort, page, perPage) {
     let plus = /\+/g;
     let comma = /\,/g;
 
-    criteria.user = user;
 
     if (q) {
         criteria.$text = { $search: q }
@@ -32,7 +30,7 @@ function query(user, q, fields, sort, page, perPage) {
         fields = fields.replace(comma, ' ');
     }
     if (page) {
-        page = parseInt(page);
+        page = parseInt(page) - 1;
         if (perPage) {
             perPage = parseInt(perPage);
         } else {
@@ -40,52 +38,51 @@ function query(user, q, fields, sort, page, perPage) {
         }
     }
 
+    blog.find(criteria)
+        .count(function (error, count) {
+            if (error) {
+                logger.error("Error", error);
+                deferred.reject({ message: error });
+            }
+            response.count = count;
+            //exec me permite dar mas especificaciones a find
+            blog.find(criteria)
+                .select(fields)
+                .skip(perPage * page)
+                .limit(perPage)
+                .sort(sort)
+                .exec((error, data) => {
+                    if (error) {
+                        logger.error("Service error", error);
+                        deferred.reject({ message: error });
+                    }
 
-    fs.readFile(dataFolder + '/blogs.json', (err, data) => {
+                    response.data = data;
+                    deferred.resolve(response);
+                });
 
-        if (err) {
-            console.error(err);
-            deferred.reject({ message: err });
-        }
-
-
-        let blogs = JSON.parse(data);
-
-        response.count = blogs.length;
-        response.data = blogs;
-
-
-        deferred.resolve(response);
-
-    });
-
-
+        });
 
     return deferred.promise;
 }
+
 
 
 /**
  * GetInfo
  * @param {*} id 
  */
-function get(id) {
-    logger.debug("get", id);
+function get(_id) {
 
-    var deferred = Q.defer();
+    let deferred = Q.defer();
+    blog.findOne(
+        { _id: _id },
+        (err, object) => {
+            if (err)
+                deferred.reject(err);
 
-    fs.readFile(dataFolder + '/blogs.json', (err, data) => {
-
-        if (err) {
-            logger.error("Service error", err);
-            deferred.reject({ message: err });
-        }
-
-        let blogs = JSON.parse(data);
-
-        deferred.resolve(blogs.find(b => b.id == id));
-
-    });
+            deferred.resolve(object);
+        });
 
     return deferred.promise;
 }

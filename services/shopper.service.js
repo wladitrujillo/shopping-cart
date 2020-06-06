@@ -18,7 +18,7 @@ module.exports.getRecommends = getRecommends;
  */
 function getInfo() {
 
-    var deferred = Q.defer();
+    let deferred = Q.defer();
     company.findOne({}, (err, object) => {
         if (err)
             deferred.reject(err);
@@ -35,7 +35,7 @@ function getInfo() {
  */
 function getSliders() {
 
-    var deferred = Q.defer();
+    let deferred = Q.defer();
 
     slide.find({})
         .exec((error, data) => {
@@ -54,7 +54,7 @@ function getSliders() {
  */
 function getRecommends() {
 
-    var deferred = Q.defer();
+    let deferred = Q.defer();
 
     recommends.find({})
         .populate('items')

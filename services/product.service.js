@@ -7,13 +7,7 @@ const logger = require('log4js').getLogger("ProductService");
 module.exports.query = query;
 module.exports.get = get;
 
-const dataFolder = "./data/sandeli";
-
 function query(q, fields, sort, page, perPage) {
-
-
-    logger.debug("Init query");
-
 
     let criteria = {};
     let response = {};
@@ -81,8 +75,8 @@ function query(q, fields, sort, page, perPage) {
  * @param {*} id 
  */
 function get(_id) {
-    logger.debug("get start by id");
-    var deferred = Q.defer();
+   
+    let deferred = Q.defer();
     product.findOne(
         { _id: _id },
         function (err, object) {
