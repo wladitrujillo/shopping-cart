@@ -5,3 +5,6 @@ build/
 **/*.min.js
 **/*.min.html
 .env
+images/**/*.jpeg
+images/**/*.png
+images/**/*.jpg
