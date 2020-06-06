@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URL,
         useUnifiedTopology: true,
         useCreateIndex: true
     })
-    .catch(err => logger.error(err));
+    .catch(err => console.error(err));
 
 
 //seteo en middleware manejo de json
@@ -48,7 +48,7 @@ app.listen(port, () => {
 
     for (let ifname of Object.keys(ifaces)) {
         var alias = 0;
-        ifaces[ifname].forEach(function (iface) {
+        ifaces[ifname].forEach(iface => {
             if ('IPv4' !== iface.family || iface.internal !== false) {
                 // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
                 return;
