@@ -55,7 +55,7 @@
               <!--/product-information-->
               <img ng-if="$ctrl.product.isNew" src="images/product-details/new.jpg" class="newarrival" alt="" />
               <h2>{{$ctrl.product.description}}</h2>
-              <p>Web ID: {{$ctrl.product.id}}</p>
+              <p>Web ID: {{$ctrl.product._id}}</p>
               <img src="images/product-details/rating.png" alt="" />
               <span>
                 <span>{{$ctrl.product.price | currency}}</span>
@@ -72,10 +72,11 @@
               <!--a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a-->
 
               <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/"
-                data-layout="button" data-size="small">                
+                data-layout="button" data-size="small">
                 <a target="_blank"
                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-                  class="fb-xfbml-parse-ignore">Share</a></div>
+                  class="fb-xfbml-parse-ignore">Share</a>
+              </div>
 
             </div>
             <!--/product-information-->
