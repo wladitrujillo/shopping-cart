@@ -1,14 +1,16 @@
 'use strict';
 
-const fs = require('fs');
+
 const Q = require('q');
+const company = require('../models/./company');
+const slide = require('../models/./slide');
+const recommends = require('../models/./recommends');
 const logger = require('log4js').getLogger("ShopperService");
 
-const dataFolder = "./data/sandeli";
 
 module.exports.getInfo = getInfo;
 module.exports.getSliders = getSliders;
-module.exports.getRecommends= getRecommends;
+module.exports.getRecommends = getRecommends;
 
 /**
  * GetInfo
@@ -17,16 +19,11 @@ module.exports.getRecommends= getRecommends;
 function getInfo() {
 
     var deferred = Q.defer();
+    company.findOne({}, (err, object) => {
+        if (err)
+            deferred.reject(err);
 
-    fs.readFile(dataFolder + '/info.json', (err, data) => {
-
-        if (err) {
-            logger.error("Service error", err);
-            deferred.reject({ message: err });
-        }
-
-        deferred.resolve(JSON.parse(data));
-
+        deferred.resolve(object);
     });
 
     return deferred.promise;
@@ -40,17 +37,14 @@ function getSliders() {
 
     var deferred = Q.defer();
 
-    fs.readFile(dataFolder + '/sliders.json', (err, data) => {
-
-        if (err) {
-            logger.error("Service error", err);
-            deferred.reject({ message: err });
-        }
-
-        deferred.resolve(JSON.parse(data));
-
-    });
-
+    slide.find({})
+        .exec((error, data) => {
+            if (error) {
+                logger.error("Service error", error);
+                deferred.reject({ message: error });
+            }
+            deferred.resolve(data);
+        });
     return deferred.promise;
 }
 
@@ -62,16 +56,15 @@ function getRecommends() {
 
     var deferred = Q.defer();
 
-    fs.readFile(dataFolder + '/recommends.json', (err, data) => {
-
-        if (err) {
-            logger.error("Service error", err);
-            deferred.reject({ message: err });
-        }
-
-        deferred.resolve(JSON.parse(data));
-
-    });
+    recommends.find({})
+        .populate('items')
+        .exec((error, data) => {
+            if (error) {
+                logger.error("Service error", error);
+                deferred.reject({ message: error });
+            }
+            deferred.resolve(data);
+        });
 
     return deferred.promise;
 }
