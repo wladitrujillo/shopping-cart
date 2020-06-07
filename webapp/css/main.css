@@ -244,7 +244,8 @@ a#scrollUp i {
 }
 
 .mainmenu ul li a {
-    color: #696763;
+    /*color: #696763;*/
+    color: rgb(5, 5, 3);
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     font-weight: 300;
@@ -317,7 +318,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a {
-    color: #fff;
+   color: #fff;   
 }
 
 .navbar-nav li ul.sub-menu li a:hover {
