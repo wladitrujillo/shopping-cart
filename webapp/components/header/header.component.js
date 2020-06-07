@@ -33,10 +33,10 @@ angular.module("eShopper")
                             { name: "Cart", href: "cart" },
                             { name: "Login", href: "login" }]
                     },
-                    {
+                   /* {
                         name: "Blog",
-                        href: "blogger"
-                    },
+                        href: "blog-list"
+                    },*/
                     {
                         name: "Contact",
                         href: "contact"

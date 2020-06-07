@@ -36,15 +36,9 @@ angular.module('eShopper')
 						product: (ProductService, $stateParams) =>
 							ProductService.get($stateParams.productId)
 					}
-				},
+				},				
 				{
-					name: 'blogger',
-					url: '/blogger',
-					component: 'blogger',
-					redirectTo: 'blogger.blog-list',
-				},
-				{
-					name: 'blogger.blog-list',
+					name: 'blog-list',
 					url: '/blog-list',
 					component: 'blogList',
 					resolve: {
@@ -52,8 +46,8 @@ angular.module('eShopper')
 					}
 				},
 				{
-					name: 'blogger.blog',
-					url: '/{blogId}',
+					name: 'blog',
+					url: '/blog/{blogId}',
 					component: 'blog',
 					resolve: {
 						blog: (BloggerService, $stateParams) =>
@@ -102,7 +96,8 @@ angular.module('eShopper')
 				OnlineHelp:"Ayuda en Linea",
 				OrderStatus:"Estado De Orden",
 				ChangeLocation:"Cambiar Ubicación",
-				FAQS:"FAQ's"
+				FAQS:"FAQ's",
+				Share:"Share"
 
 			});
 
@@ -140,7 +135,8 @@ angular.module('eShopper')
 				OnlineHelp:"Online Help",
 				OrderStatus:"Order Status",
 				ChangeLocation:"Change Location",
-				FAQS:"FAQ's"
+				FAQS:"FAQ's",
+				Share:"Compartir"
 			});
 			$translateProvider.preferredLanguage('es');
 		}

@@ -10,7 +10,8 @@ angular.module('eShopper')
 
 
             this.getRelatedItems = function () {
-                ProductService.getAll(2, 6)
+                let page = Math.floor(Math.random() * (5 - 1)) + 1;
+                ProductService.getAll(page, 6)
                     .then(response => {
                         let products = response.data;
                         let index = products.length;
