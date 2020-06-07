@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="publisher" ng-controller="headerCtrl">
 
 <head>
     <meta charset="utf-8">
     <meta property="og:url"
         content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="How much does culture influence creative thinking?" />
-    <meta property="og:image"
-        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+    <meta property="og:image" content="{{image}}" />
 
     <title>Sandeli Sabores</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.0/rzslider.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/main.css">
+
 
 
 </head>
 <!--/head-->
 
-<body ng-app>
+<body>
 
-    <div class="container">
-        <div class="row">
 
-            <h4>test</h4>
-        </div>
 
-    </div>
 
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.2/angular-translate.min.js"></script>
-
-
-
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=603681106914591&autoLogAppEvents=1"></script>
 
+
+    <script>
+        angular
+            .module("publisher", [])
+            .controller("headerCtrl", ["$scope",function ($scope) {
+                $scope.title = "Plaza Sesamo";
+                $scope.image = "https://sandelisabores.com/images/cakes/plazaSesamo.jpeg";
+            }]);
+
+    </script>
 
 
 
