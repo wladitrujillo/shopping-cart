@@ -1,6 +1,6 @@
 angular
 	.module('eShopper', ['ui.router', 'rzSlider', 'pascalprecht.translate']);
-	
+
 angular.module('eShopper')
 	.config(['$stateProvider', '$urlRouterProvider', '$translateProvider',
 		function ($stateProvider, $urlRouterProvider, $translateProvider) {
@@ -95,7 +95,14 @@ angular.module('eShopper')
 				AllRightsReserved: "Todos Los Derechos Reservados",
 				DesignedBy: "Diseñado por",
 				AddToWishlist: "Agregar como deseado",
-				ViewDetail: "Ver Detalle"
+				ViewDetail: "Ver Detalle",
+				AboutUs:"Sobre Nosotros",
+				YourEmailAddress:"Tu dirección de correo",
+				FooterMessage:"Recibe nuestras ofertas y promociones en tu correo eléctronico...",
+				OnlineHelp:"Ayuda en Linea",
+				OrderStatus:"Estado De Orden",
+				ChangeLocation:"Cambiar Ubicación",
+				FAQS:"FAQ's"
 
 			});
 
@@ -126,7 +133,14 @@ angular.module('eShopper')
 				AllRightsReserved: "All Rights Reserved",
 				DesignedBy: "Designed by",
 				AddToWishlist: "Add to wishlist",
-				ViewDetail: "View Detail"
+				ViewDetail: "View Detail",
+				AboutUs:"About Us",
+				YourEmailAddress:"Your email address",
+				FooterMessage:"Get the most recent updates from our site and be updated your self...",
+				OnlineHelp:"Online Help",
+				OrderStatus:"Order Status",
+				ChangeLocation:"Change Location",
+				FAQS:"FAQ's"
 			});
 			$translateProvider.preferredLanguage('es');
 		}

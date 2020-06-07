@@ -21,7 +21,7 @@ angular.module('eShopper')
             }
 
             function findIndex(product) {
-                return items.findIndex(e => e.id === product.id);
+                return items.findIndex(e => e.id === product._id);
             }
 
             function Item(product, count) {

@@ -103,9 +103,9 @@
                                 <a ng-if="me.hasChilds" href="#"><span translate>{{me.name}}</span><i class="fa fa-angle-down"></i></a>
                                 <ul ng-if="me.hasChilds" role="menu" class="sub-menu">
                                     <li ng-repeat="child in me.childs">
-                                        <a ui-sref="{{child.href}}"><span translate>{{child.name}}</span></a></li>
+                                        <a data-toggle="collapse" data-target=".navbar-collapse" ui-sref="{{child.href}}"><span translate>{{child.name}}</span></a></li>
                                 </ul>
-                                <a ng-if="!me.hasChilds" href="#" ui-sref="{{me.href}}"
+                                <a data-toggle="collapse" data-target=".navbar-collapse" ng-if="!me.hasChilds" href="#" ui-sref="{{me.href}}"
                                     ui-sref-active="active"><span translate>{{me.name}}</span></a>
                             </li>
 
