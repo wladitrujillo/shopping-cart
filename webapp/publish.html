@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta property="og:url"
-        content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+        content="https://sandelisabores.com/#!/product/{{product._id}}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{title}}" />
-    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:description" content="{{title}}" />
     <meta property="og:image" content="{{image}}" />
 
     <title>Sandeli Sabores</title>
@@ -20,23 +20,19 @@
 <body>
 
 
-
-
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0&appId=603681106914591&autoLogAppEvents=1"></script>
-
 
     <script>
         angular
             .module("publisher", [])
             .controller("headerCtrl", ["$scope",function ($scope) {
+                $scope.product={};
+                $scope.product._id= '5ed86f260d0bf822201a969b';
                 $scope.title = "Plaza Sesamo";
                 $scope.image = "https://sandelisabores.com/images/cakes/plazaSesamo.jpeg";
             }]);
