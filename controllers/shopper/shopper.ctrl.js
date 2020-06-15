@@ -2,6 +2,7 @@
 
 const emailService = require('../../services/email.service');
 const shopperService = require('../../services/shopper.service');
+const googleService = require('../../services/google.recaptcha');
 const logger = require('log4js').getLogger("ShopperController");
 
 module.exports.getInfo = getInfo;
@@ -34,15 +35,31 @@ function getRecommends(req, res) {
 }
 
 
-function sendEmail(req, res) {   
+async function sendEmail(req, res) {
 
+    logger.debug("sendEmail start");
     let email = req.body.email;
     let subject = req.body.subject;
     let message = '<div>' + req.body.message + '</div>';
 
-    emailService.sendEmail(email, process.env.EMAIL_RECEIVER, subject, message)
-        .then(data => onSuccess(data, res))
-        .catch(err => onError(err, res));
+    let token = req.body.token;
+
+    try {
+
+        let response = await googleService.verify(token);
+
+        if (!response.success || response.score < 0.7) {
+            logger.error("Robot detected score:", response.score);
+            res.status(403).send("You are a robot");
+        } else {
+            emailService.sendEmail(email, process.env.EMAIL_RECEIVER, subject, message)
+                .then(data => onSuccess(data, res))
+                .catch(err => onError(err, res));
+        }
+
+    } catch (error) {
+        res.status(500).send("Error", error.message);
+    }
 
 }
 

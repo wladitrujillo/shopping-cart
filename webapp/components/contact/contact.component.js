@@ -6,33 +6,40 @@ angular.module("eShopper")
 
             let map = {};
 
-            service.getInfo().then(data => {
-                this.company = data;
-                showMap(this.company.position);
-            });
+            service
+                .getInfo()
+                .then(data => {
+                    this.company = data;
+                    showMap(this.company.position);
+                });
 
 
-            this.emailBody = {
-                name: "",
-                email: "",
-                subject: "",
-                message: ""
-            };
 
             this.sendEmail = (emailBody) => {
 
-                service.sendEmail(emailBody)
-                    .then(response => {
-                        console.log(response)
-                    }).catch(error => {
-                        console.error(error);
-                    });
+
+                grecaptcha.ready(() => {
+                    grecaptcha
+                        .execute('6LcMvqQZAAAAAJYNUZoD5a_IK3b_WY3Dm7-nGIA4', { action: 'send_email' }).then((token) => {
+                            // Add your logic to submit to your backend server here.
+                            emailBody.token = token;
+                            service.sendEmail(emailBody)
+                                .then(response => {
+                                    document.getElementById('main-contact-form').reset();
+                                }).catch(error => {
+                                    console.error(error);
+                                });
+                        });
+
+                });
+
             }
 
 
+
+
+
             function showMap(position) {
-
-
 
                 map = new GMaps({
                     el: '#gmap',
