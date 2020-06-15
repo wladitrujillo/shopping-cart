@@ -20,6 +20,7 @@ function sendEmail(from, to, subject, html) {
     let transporter = nodemailer.createTransport({
         "host": process.env.EMAIL_HOST,
         "port": process.env.EMAIL_PORT,
+        "secure": true, // use SSL, you can try with TLS, but port is then 587
         "auth": {
             "user": process.env.EMAIL_USER,
             "pass": process.env.EMAIL_PASSWORD
